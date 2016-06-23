@@ -1,0 +1,132 @@
+--- 
+layout: cmsplus/adminbase 
+title: Analytics 
+scripts: ['/cmsplus/js/jquery-jvectormap-2.0.3.min.js','/cmsplus/js/maps/jquery-jvectormap-world-mill-en.js','/cmsplus/js/maps/jquery-jvectormap-us-aea-en.js','/cmsplus/js/Chart.js','/cmsplus/js/analytics.js'] 
+---
+<!-- top tiles -->
+<div class="row tile_count">
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-line-chart"></i> This Month</span>
+        <div class="count"></div>
+        <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-line-chart"></i> Last 14 Days </span>
+        <div class="count"></div>
+        <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-line-chart"></i> Last 7 Days</span>
+        <div class="count"></div>
+        <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-line-chart"></i> Day Before</span>
+        <div class="count"></div>
+        <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+        <span class="count_top"><i class="fa fa-line-chart"></i> Yesterday</span>
+        <div class="count"></div>
+        <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+    </div>
+</div>
+<!-- /top tiles -->
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Page Views</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div class="" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                        <li role="presentation" class="">
+                            <a href="#30day_content" id="30day-tab" role="tab" data-toggle="tab" aria-expanded="true">
+                           Last 30 Days</a>
+                        </li>
+                        <li role="presentation" class="active">
+                            <a href="#7day_content" role="tab" id="7day-tab" data-toggle="tab" aria-expanded="false">
+                           Last 7 Days</a>
+                        </li>
+                        <li role="presentation" class="">
+                            <a href="#yesterday_content" role="tab" id="yesterday-tab" data-toggle="tab" aria-expanded="false">
+                        Yesterday</a>
+                        </li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade" id="30day_content" aria-labelledby="30day-tab">
+                            <canvas id="chart30"></canvas>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade active in" id="7day_content" aria-labelledby="7day-tab">
+                            <canvas id="chart7"></canvas>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="yesterday_content" aria-labelledby="yesterday-tab">
+                            <canvas id="chartyesterday"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Visitors location <small>geo-presentation</small></h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Settings 1</a>
+                            </li>
+                            <li><a href="#">Settings 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <div id="country-view" class="dashboard-widget-content">
+                    <div class="col-md-4 hidden-small">
+                        <h2 class="line_30"></h2>
+
+                        <table class="countries_list">
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td class="fs15 fw700 text-right"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="fs15 fw700 text-right"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="fs15 fw700 text-right"></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="fs15 fw700 text-right"></td>
+                                </tr>
+                                <tr>
+                                    <td>Britain</td>
+                                    <td class="fs15 fw700 text-right">10%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="world-map-gdp" class="col-md-8 col-sm-12 col-xs-12" style="height:230px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

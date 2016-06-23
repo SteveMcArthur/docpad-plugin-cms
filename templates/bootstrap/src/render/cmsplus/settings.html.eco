@@ -1,0 +1,68 @@
+---
+layout: cmsplus/admin
+title: Settings
+---
+<%settings = @getSettings()%>
+<div class="x_panel">
+    <div class="x_title">
+         <h2>Settings</h2>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+    <table  class="table settings">
+      <tbody>
+        <%site = @site%>
+        <tr class="" data-name="title">  
+          <th class="name">Title</th>
+          <td><input type="text" name="site-title" id="site-title" value="<%-site.title%>" ></td>
+        </tr>
+        
+        <tr class="" data-name="description">  
+          <th class="name">Description</th>
+          <td>
+              <textarea type="text" id="site-desc"><%-site.description%></textarea>             
+          </td>
+        </tr>
+          
+        <tr class="" data-name="keywords">  
+          <th class="name">Keywords</th>
+          <td><input type="text" name="site-keywords" id="site-keywords" value="<%-site.keywords%>" ></td>
+        </tr>
+          
+        <tr class="" data-name="url">  
+          <th class="name">URL</th>
+          <td><input type="text" name="site-url" id="site-url" value="<%-site.url%>" ></td>
+        </tr>
+          
+        <tr class="" data-name="oldurls">  
+          <th class="name">Old URLs</th>
+          <td><input type="text" name="site-oldurls" id="site-oldurls" value="<%-site.oldUrls%>" ></td>
+        </tr>
+        <tr class="" data-name="styles">  
+          <th class="name">Styles</th>
+          <td>
+            <ul class="edit-list">
+            <%styles = site.styles or []%>
+            <%for item in styles:%>
+                <li><a href="#"><%-item%></a></li>
+            <%end%>
+            </ul>
+            </td>
+        </tr>
+        <tr class="" data-name="scripts">  
+          <th class="name">Scripts</th>
+          <td>
+            <ul class="edit-list">
+            <%scripts = site.scripts or []%>
+            <%for item in scripts:%>
+                <li><a href="#"><%-item%></a></li>
+            <%end%>
+            </ul>
+         </td>
+        </tr>
+
+      </tbody>
+    </table>
+         <a href="/cmsplus/" class="btn btn-primary">Save Changes</a>
+    </div>
+</div>

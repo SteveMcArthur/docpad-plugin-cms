@@ -1,0 +1,50 @@
+--- 
+layout: default
+---
+<section id="main-content">
+    <div class="large-9 columns" role="content">
+        <article>
+            <h1><a href="<%=@document.url %>"><%-@document.title%></a></h1>
+            <p class="article_pub-date">Published
+                <time datetime="<%-@document.mtime.toISOString()%>" pubdate=""><%-@document.mtime.toDateString()%></time>
+                <%editURL = if @document.docId then @document.docId else "?slug="+@document.slug%>
+                <%editURL = "/admin/edit/"+editURL%>
+                <span class="right edit"><a href="/admin/edit/<%-editURL%>">Edit</a></span>
+            </p>
+            <figure>
+                <img src="<%-@document.img%>" alt="">
+            </figure>
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <%- @content %>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- Sidebar -->
+
+    <aside class="large-3 columns">
+
+        <div class="widget">
+            <h4>About The Blog</h4>
+            <p class="">
+                <%-@site.description%>
+            </p>
+        </div>
+        <div class="widget">
+            <h4>Recent Posts</h4>
+            <ul class="plain">
+                <li>
+                    <a href="">Post</a>
+                </li>
+                <li>
+                    <a href="">Another Post</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+</section>
+
+<!-- End Sidebar -->

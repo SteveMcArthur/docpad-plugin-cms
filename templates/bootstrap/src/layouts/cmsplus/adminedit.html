@@ -1,0 +1,60 @@
+--- 
+layout: cmsplus/admin
+---
+
+<div class="row">
+    <div class="large-9 columns">
+        <div class="post-editor">
+            <div class="wrap">
+                <input type="text" id="post-title" name="post_title" size="30" value="" placeholder="Enter title here" spellcheck="true" autocomplete="off">
+                <span id="slug"></span><span style="display:none;" id="docId"></span>
+                <p id="title-callout" class="triangle-right left hide">Enter title</p>
+            </div>
+            <div class="editor-tools"></div>
+            <form>
+                <textarea name="editor1" id="editor1" rows="10"></textarea>
+            </form>
+        </div>
+    </div>
+    <div class="large-3 columns">
+        <div id="published" class="panel">
+            <h2>Publish</h2>
+            <ul>
+                <li><a href="#"><i class="icon-bullhorn"></i>Status <span>Published</span></a></li>
+                <li><a href="#"><i class="icon-eye"></i>Visibility <span>Public</span></a></li>
+                <li><a href="#"><i class="icon-history"></i>Revisions <span>7</span></a></li>
+                <li><a href="#"><i class="icon-calendar"></i>Published on: <span>15 May 2015</span></a></li>
+            </ul>
+        </div>
+        <div id="img-panel" class="panel">
+            <h2>Feature Image</h2>
+            <img id="feature-img" src="">
+
+            <div id="imgdim"></div>
+
+        </div>
+        <div class="panel">
+            <h2>Tags</h2>
+            <input type="text" id="new-tag" name="new-tag" width="80%">
+            <input type="button" id="add-tag" value="Add">
+            <ul id="tags">
+
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+<div id="edit-loader">
+
+</div>
+<div id="edit-msg">
+    <div>
+        Post Updated Successfully
+    </div>
+</div>
+<div id="image-picker" title="Choose Image">
+    <ul class="small-block-grid-3">
+        <li><img src="/images/default-image.jpg"></li>
+    </ul>
+</div>

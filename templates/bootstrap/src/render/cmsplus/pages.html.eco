@@ -1,0 +1,38 @@
+---
+layout: cmsplus/admin
+title: Pages
+scripts: "<script>$('.new-btn').css('display','inline');</script>"
+---
+<div class="x_panel">
+    <div class="x_title">
+         <h2>Pages</h2>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Path</th>
+              <th>Date</th>
+              <th>Slug</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%posts = @getPages()%>
+            <%for post in posts:%>
+            <tr data-slug="<%-post.slug%>" data-id="<%-post.docId%>">
+              <%editURL = if post.docId then post.docId else "?slug="+post.slug%>
+              <%editURL = "/cmsplus/edit/"+editURL%>
+              <%title = if post.title then post.title else if post.slug == 'index' then 'home' else '' %>
+
+              <td><a href="<%-editURL%>"><i class="icon-pencil"></i><%-title%></a></td>
+              <td><%-post.relativeOutDirPath%></td>
+              <td><%-post.ctime.toDateString()%></td>
+             <td><%-post.slug%></td>
+            </tr>
+            <%end%>
+          </tbody>
+        </table>
+    </div>
+</div>

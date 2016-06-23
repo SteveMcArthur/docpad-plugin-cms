@@ -1,0 +1,57 @@
+{
+  "name": "docpad-plugin-analytics",
+  "version": "2.0.5",
+  "description": "Retrieves google analytics data from your analytics account so it can be displayed within a docpad application",
+  "homepage": "https://github.com/SteveMcArthur/docpad-plugin-docpad-plugin-analytics",
+  "keywords": [
+    "docpad",
+    "analytics",
+    "docpad-plugin",
+    "docpad-plugin-analytics",
+    "analytics",
+    "google analytics",
+    "reports",
+    "website reports",
+    "analytics reports"
+  ],
+  "author": "Steve McArthur <contact@stevemcarthur.co.uk> (http://www.stevemcarthur.co.uk)",
+  "maintainers": [
+    "Steve McArthur <contact@stevemcarthur.co.uk> (https://github.com/SteveMcArthur)"
+  ],
+  "contributors": [
+    "Steve McArthur (https://github.com/SteveMcArthur)"
+  ],
+  "bugs": {
+    "url": "https://github.com/SteveMcArthur/docpad-plugin-analytics/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SteveMcArthur/docpad-plugin-analytics.git"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "peerDependencies": {
+    "docpad": "6"
+  },
+  "dependencies": {
+    "googleapis": "^2.1.7"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "docpad": "6",
+    "chai": "~1.9.0",
+    "request": "~2.33.0",
+    "projectz": "~0.3.13"
+  },
+  "main": "./out/analytics.plugin.js",
+  "scripts": {
+    "test": "node ./out/analytics.test.js"
+  },
+  "license": {
+    "type": "MIT"
+  },
+  "cakeConfiguration": {
+    "COFFEE_SRC_PATH": "src"
+  }
+}

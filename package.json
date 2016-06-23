@@ -1,0 +1,54 @@
+{
+  "name": "docpad-plugin-cms",
+  "version": "2.0.0",
+  "description": "CMS for docpad",
+  "homepage": "https://github.com/SteveMcArthur/docpad-plugin-cms",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "cms",
+    "content management system",
+    "admin interface"
+  ],
+  "author": "Steve McArthur <contact@stevemcarthur.co.uk> (http://www.stevemcarthur.co.uk)",
+  "maintainers": [
+    "Steve McArthur <contact@stevemcarthur.co.uk> (https://github.com/SteveMcArthur)"
+  ],
+  "contributors": [
+    "Steve McArthur (https://github.com/SteveMcArthur)"
+  ],
+  "bugs": {
+    "url": "https://github.com/SteveMcArthur/docpad-plugin-cms/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SteveMcArthur/docpad-plugin-cms.git"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "peerDependencies": {
+    "docpad": "6",
+    "docpad-plugin-eco": "^2.1.0",
+    "docpad-plugin-cleanurls": "^2.8.1",
+    "docpad-plugin-posteditor": "^2.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^0.30.0",
+    "watchr": "^2.4.13"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.3",
+    "docpad": "6",
+    "projectz": "~0.3.13",
+    "chai": "^3.5.0"
+  },
+  "main": "./out/cms.plugin.js",
+  "scripts": {
+    "test": "node ./out/cms.test.js"
+  },
+  "license": "MIT",
+  "cakeConfiguration": {
+    "COFFEE_SRC_PATH": "src"
+  }
+}
