@@ -25,13 +25,13 @@
     <%- @getBlock('meta').toHTML() %>
     
     <!-- Admin styles are independent of the docpad application -->
-    <link rel="stylesheet" href="/cmsplus/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/cmsplus/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="/cmsplus/css/skins/flat/green.css" />
-    <link rel="stylesheet" href="/cmsplus/css/bootstrap-progressbar-3.3.4.min.css" />
-    <link rel="stylesheet" href="/cmsplus/css/jquery-jvectormap-2.0.3.css" />
-    <link rel="stylesheet" href="/cmsplus/css/custom.min.css" />
-     <link rel="stylesheet" href="/cmsplus/css/extras.css" />
+    <link rel="stylesheet" href="/cms/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/cms/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/cms/css/skins/flat/green.css" />
+    <link rel="stylesheet" href="/cms/css/bootstrap-progressbar-3.3.4.min.css" />
+    <link rel="stylesheet" href="/cms/css/jquery-jvectormap-2.0.3.css" />
+    <link rel="stylesheet" href="/cms/css/custom.min.css" />
+     <link rel="stylesheet" href="/cms/css/extras.css" />
     <%- @getBlock('styles').add(@document.styles).toHTML() %>
 </head>
   <body class="nav-md">
@@ -47,7 +47,7 @@
             <!-- menu profile quick info -->
             <div class="profile">
               <div class="profile_pic">
-                <img src="/cmsplus/images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="/cms/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -62,14 +62,14 @@
           <div class="menu_section">
 
             <ul class="nav side-menu">
-              <li><a href="/cmsplus"><i class="fa fa-home"></i>Dashboard</a></li>
-              <li><a href="/cmsplus/posts"><i class="fa fa-edit"></i>Posts</a></li>
-              <li><a href="/cmsplus/pages"><i class="fa fa-files-o"></i>Pages</a></li>
-              <li><a href="/cmsplus/plugins"><i class="fa fa-plug"></i>Plugins</a></li>
-              <li><a href="/cmsplus/settings"><i class="fa fa-sliders"></i>Settings</a></li>
-              <li><a href="/cmsplus/appearance"><i class="fa fa-paint-brush"></i>Appearance</a></li>
-              <li><a href="/cmsplus/users"><i class="fa fa-user"></i>Users</a></li>
-            <li><a href="/cmsplus/analytics"><i class="fa fa-bar-chart-o"></i>Analytics</a></li>
+              <li><a href="/cms"><i class="fa fa-home"></i>Dashboard</a></li>
+              <li><a href="/cms/posts"><i class="fa fa-edit"></i>Posts</a></li>
+              <li><a href="/cms/pages"><i class="fa fa-files-o"></i>Pages</a></li>
+              <li><a href="/cms/plugins"><i class="fa fa-plug"></i>Plugins</a></li>
+              <li><a href="/cms/settings"><i class="fa fa-sliders"></i>Settings</a></li>
+              <li><a href="/cms/appearance"><i class="fa fa-paint-brush"></i>Appearance</a></li>
+              <li><a href="/cms/users"><i class="fa fa-user"></i>Users</a></li>
+            <li><a href="/cms/analytics"><i class="fa fa-bar-chart-o"></i>Analytics</a></li>
             </ul>
           </div>
 
@@ -106,7 +106,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="">
               <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                <img src="/cmsplus/images/img.jpg" alt="">John Doe
+                <img src="/cms/images/img.jpg" alt="">John Doe
                 <span class=" fa fa-angle-down"></span>
               </a>
               <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -130,7 +130,7 @@
               <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                 <li>
                   <a>
-                    <span class="image"><img src="/cmsplus/images/img.jpg" alt="Profile Image" /></span>
+                    <span class="image"><img src="/cms/images/img.jpg" alt="Profile Image" /></span>
                     <span>
                       <span>John Smith</span>
                       <span class="time">3 mins ago</span>
@@ -142,7 +142,7 @@
                 </li>
                 <li>
                   <a>
-                    <span class="image"><img src="/cmsplus/images/img.jpg" alt="Profile Image" /></span>
+                    <span class="image"><img src="/cms/images/img.jpg" alt="Profile Image" /></span>
                     <span>
                       <span>John Smith</span>
                       <span class="time">3 mins ago</span>
@@ -154,7 +154,7 @@
                 </li>
                 <li>
                   <a>
-                    <span class="image"><img src="/cmsplus/images/img.jpg" alt="Profile Image" /></span>
+                    <span class="image"><img src="/cms/images/img.jpg" alt="Profile Image" /></span>
                     <span>
                       <span>John Smith</span>
                       <span class="time">3 mins ago</span>
@@ -166,7 +166,7 @@
                 </li>
                 <li>
                   <a>
-                    <span class="image"><img src="/cmsplus/images/img.jpg" alt="Profile Image" /></span>
+                    <span class="image"><img src="/cms/images/img.jpg" alt="Profile Image" /></span>
                     <span>
                       <span>John Smith</span>
                       <span class="time">3 mins ago</span>
@@ -207,15 +207,15 @@
       </div>
     </div>
     <!-- Admin scripts are independent of the actual docpad application -->
-    <script src="/cmsplus/js/jquery.min.js"></script>
-    <script src="/cmsplus/js/bootstrap.min.js"></script>
-    <script src="/cmsplus/js/base.js"></script>
+    <script src="/cms/js/jquery.min.js"></script>
+    <script src="/cms/js/bootstrap.min.js"></script>
+    <script src="/cms/js/base.js"></script>
     
     <%- @getBlock('scripts').add(@document.scripts,{defer:false}).toHTML() %>
 
 
     <!-- Custom Theme Scripts -->
-    <script src="/cmsplus/js/custom.js"></script>
+    <script src="/cms/js/custom.js"></script>
 
    
 </body>

@@ -26,9 +26,10 @@ setupFolders = (docpad,plugin) ->
 copyFiles = (plugin) ->
     config = plugin.getConfig()
     templateLocation = config.templateLocation
-    plugin.tmpllayoutsDir = path.join(templateLocation,'src','layouts','cms')
-    plugin.tmplfilesDir = path.join(templateLocation,'src','static','cms')
-    plugin.tmpldocsDir = path.join(templateLocation,'src','render','cms')
+    templateFolder = config.templateFolder
+    plugin.tmpllayoutsDir = path.join(templateLocation,'src','layouts',templateFolder)
+    plugin.tmplfilesDir = path.join(templateLocation,'src','static',templateFolder)
+    plugin.tmpldocsDir = path.join(templateLocation,'src','render',templateFolder)
     if config.copyTemplates
         console.log("Copy templates...")
         copy(plugin.tmpllayoutsDir,plugin.layoutsPath)

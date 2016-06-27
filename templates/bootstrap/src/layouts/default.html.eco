@@ -31,7 +31,7 @@
         <div class="row">
 		<h1 class="brand"><a href="<%= @site.url %>"><%- @site.title %></a></h1>
             <div class="right">
-                <span><a href="/cmsplus">Admin</a></span>
+                <span><a href="/cms">Admin</a></span>
             </div>
         </div>
 	</header>

@@ -1,5 +1,5 @@
 --- 
-layout: cmsplus/adminbase 
+layout: cms/adminbase 
 ---
 <div class="page-title">
   <div class="title_left">

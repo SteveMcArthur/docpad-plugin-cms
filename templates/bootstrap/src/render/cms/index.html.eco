@@ -1,5 +1,5 @@
 --- 
-layout: cmsplus/adminbase 
+layout: cms/adminbase 
 title: Dashboard 
 ---
 <!-- top tiles -->

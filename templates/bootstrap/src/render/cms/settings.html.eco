@@ -1,5 +1,5 @@
 ---
-layout: cmsplus/admin
+layout: cms/admin
 title: Settings
 ---
 <%settings = @getSettings()%>
@@ -63,6 +63,6 @@ title: Settings
 
       </tbody>
     </table>
-         <a href="/cmsplus/" class="btn btn-primary">Save Changes</a>
+         <a href="/cms/" class="btn btn-primary">Save Changes</a>
     </div>
 </div>

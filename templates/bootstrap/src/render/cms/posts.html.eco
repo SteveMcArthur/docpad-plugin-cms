@@ -1,5 +1,5 @@
 ---
-layout: cmsplus/admin
+layout: cms/admin
 title: Posts
 scripts: "<script>$('.new-btn').css('display','inline');</script>"
 ---
@@ -24,7 +24,7 @@ scripts: "<script>$('.new-btn').css('display','inline');</script>"
             <%for post in posts:%>
             <tr data-slug="<%-post.slug%>" data-id="<%-post.docId%>">
               <%editURL = if post.docId then post.docId else "?slug="+post.slug%>
-              <%editURL = "/cmsplus/edit/"+editURL%>
+              <%editURL = "/cms/edit/"+editURL%>
 
               <td><a href="<%-editURL%>"><i class="fa fa-pencil"></i><%-post.title%></a></td>
               <td><%-post.author%></td>
