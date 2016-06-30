@@ -6,7 +6,9 @@ testerConfig =
 docpadConfig =
     plugins:
         analytics:
-            credentials: {}
+            credentials:
+                client_email: 'email@email.com'
+                private_key: 'xasde32345'
 
 require('docpad').require('testers')
-    .test(testerConfig)
+    .test(testerConfig,docpadConfig)

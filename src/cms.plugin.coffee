@@ -209,6 +209,13 @@ module.exports = (BasePlugin) ->
             #url to retrieve updated data by js
             server.get plugin.dataURL, (req,res,next) ->
                 item = req.params.item
+                if item == "user"
+                    name = "Not logged in"
+                    id = -1
+                    if req.user and req.user.name
+                        name = req.user.name
+                        id = req.user.our_id
+                    res.json({user:name,id: id})
             @
         
 

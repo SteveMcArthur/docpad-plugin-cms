@@ -3,6 +3,7 @@ module.exports = (BasePlugin) ->
     # Define Plugin
     google = require('googleapis')
     path = require('path')
+    fs = require('fs')
     class AnalyticsPlugin extends BasePlugin
         # Plugin name
         name: 'analytics'
@@ -26,62 +27,42 @@ module.exports = (BasePlugin) ->
             #the rows and totals fields
             minimiseData: true
             
-            cacheExpires: 1000*60*60*12
+            cacheExpires: 1000*60*60
             
-            #example of a google analytics api query. You will probably want
-            #to use googles query explorer (https://ga-dev-tools.appspot.com/query-explorer/)
-            #to build your own query.
-            queries:[{
-                'endPoint': ['30daysPageviews','uniquePageviews'],
-                'query':{
-                    'ids':'',#replace this with your own ID
-                    'metrics': 'ga:uniquePageviews',
-                    'dimensions': 'ga:pageTitle',
-                    'start-date': '30daysAgo',
-                    'end-date': 'yesterday',
-                    'sort': '-ga:uniquePageviews',
-                    'max-results': 10
-                    }
-                },{
-                'endPoint': '7daysPageviews',
-                'query':{
-                    'ids':'',
-                    'metrics': 'ga:uniquePageviews',
-                    'dimensions': 'ga:pageTitle',
-                    'start-date': '7daysAgo',
-                    'end-date': 'yesterday',
-                    'sort': '-ga:uniquePageviews',
-                    'max-results': 10
-                    }
-                },{
-                'endPoint': 'yesterdayPageviews',
-                'query':{
-                    'ids':'',
-                    'metrics': 'ga:uniquePageviews',
-                    'dimensions': 'ga:pageTitle',
-                    'start-date': 'yesterday',
-                    'end-date': 'yesterday',
-                    'sort': '-ga:uniquePageviews',
-                    'max-results': 10
-                    }
-                'endPoint': '60daySessions',
-                'query':{
-                    'ids':'',
-                    'metrics': 'ga:sessions',
-                    'dimensions': 'ga:date',
-                    'start-date': '60daysAgo',
-                    'end-date': 'yesterday',
-                    'sort': '-ga:date',
-                    'max-results': 60
-                    }
-                }]
+            #use google's query explorer (https://ga-dev-tools.appspot.com/query-explorer/)
+            #to build your own queries.
+            queries: []
+        
+        #common queries - these will be merged with any queries
+        #provided as part of the config
+        defaultQueries: require('./defaultQueries')
+        
+        getEndpoints: () ->
+            queries = @getConfig().queries
+            endpoints = []
+            for q in queries
+                if q.endPoint
+                    endpoints.push(q.endPoint)
+            return endpoints
+        
+        findQuery: (endPoint) ->
+            queries = @getConfig().queries
+            theQry = null
+            for q in queries
+                if q.endPoint instanceof Array
+                    if q.endPoint.indexOf(endPoint) > -1
+                        theQry = q.query
+                else if q.endPoint == endPoint
+                    theQry = q.query
+            return theQry
         
         formatData: (rawData) ->
-            minimiseData = @minimiseData
+            minimiseData = @getConfig().minimiseData
             data = rawData
             if minimiseData
                 data =
                     rows: rawData.rows
+                    columnHeaders: rawData.columnHeaders
                     totalResults: rawData.totalResults
                     totalsForAllResults: rawData.totalsForAllResults
             return data
@@ -114,9 +95,21 @@ module.exports = (BasePlugin) ->
                         query.cachedData = rawData
                         data = plugin.formatData(rawData)
                         callback(null,data)
-        
-        constructor: ->
+                        
+            
+        setConfig: ->
             super
+            
+            plugin = @
+            endpoints = plugin.getEndpoints()
+            queries = plugin.getConfig().queries
+                    
+            for q in plugin.defaultQueries
+                if endpoints.indexOf(q.endPoint) == -1
+                    queries.push(q)
+            
+            plugin.init()
+            
             
          
         init: ->
@@ -132,36 +125,33 @@ module.exports = (BasePlugin) ->
             plugin = @
             config = plugin.getConfig()
             
-            plugin.init()
             queries = config.queries
             
             server.get config.dataURL, (req,res,next) ->
                 endPoint = req.params.endPoint
-
-                theQry = null
-                for q in queries
-                    if q.endPoint instanceof Array
-                        if q.endPoint.indexOf(endPoint) > -1
-                            theQry = q.query
-                    else if q.endPoint == endPoint
-                        theQry = q.query
-                
-                if theQry
-                    try
-                        if !theQry.ids
-                            theQry.ids = config.qryId
-                        plugin.retrieveData theQry, (err,data) ->
-                            if err
-                                obj =
-                                    msg:'error retrieving data',
-                                    err: err
-                                res.status(500).json(obj)
-                            else
-                                res.json(data)
-                    catch err
-                        res.status(500).json(err)
+                if endPoint == "endpoints"
+                    endPoints = plugin.getEndpoints()
+                    res.json(endPoints)
                 else
-                    res.status(500).json({msg:"Unable to find matching query"})
+
+                    theQry = plugin.findQuery(endPoint)
+
+                    if theQry
+                        try
+                            if !theQry.ids
+                                theQry.ids = config.qryId
+                            plugin.retrieveData theQry, (err,data) ->
+                                if err
+                                    obj =
+                                        msg:'error retrieving data',
+                                        err: err
+                                    res.status(500).json(obj)
+                                else
+                                    res.json(data)
+                        catch err
+                            res.status(500).json(err)
+                    else
+                        res.status(500).json({msg:"Unable to find matching query"})
                         
 
             @
