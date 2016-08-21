@@ -7,6 +7,8 @@
 
 Docpad plugin that provides a CMS (Content Management System)/admin interface for a Docpad application.
 
+The plugin is currently in ***pre-alpha*** with functionality likely to change.
+
 ![Screen shot](https://raw.githubusercontent.com/SteveMcArthur/docpad-plugin-cms/master/screenshot.jpg)
 
 It provides the user interface for CMS functionality. The actual functionality for the CMS is provided by a number of plugins. For example, content editing is provided by the [Post Editor](https://www.npmjs.com/package/docpad-plugin-posteditor) plugin.
