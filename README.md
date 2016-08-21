@@ -1,5 +1,6 @@
 # CMS Plugin for [DocPad](http://docpad.org)
 
+![Development Status](https://img.shields.io/badge/development%20status-pre--alpha-orange.svg)
 [![Build Status](https://img.shields.io/travis/SteveMcArthur/docpad-plugin-cms/master.svg)](https://travis-ci.org/SteveMcArthur/docpad-plugin-cms "Check this project's build status on TravisCI")
 [![NPM version](https://img.shields.io/npm/v/docpad-plugin-cms.svg)](https://www.npmjs.com/package/docpad-plugin-cms "View this project on NPM")
 [![NPM downloads](https://img.shields.io/npm/dm/docpad-plugin-cms.svg)](https://www.npmjs.com/package/docpad-plugin-cms "View this project on NPM")
