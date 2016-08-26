@@ -35,10 +35,10 @@ out/
 membership/
 data/
 examples/simple/plugins/
-examples/simple/src/layouts/cmsplus/
-examples/simple/src/render/cmsplus/
-examples/simple/src/static/cmsplus/
-test/src/layouts/cmsplus/
-test/src/documents/cmsplus/
-test/src/files/cmsplus/
+examples/simple/src/layouts/cms/
+examples/simple/src/render/cms/
+examples/simple/src/static/cms/
+test/src/layouts/cms/
+test/src/documents/cms/
+test/src/files/cms/
 credentials.json

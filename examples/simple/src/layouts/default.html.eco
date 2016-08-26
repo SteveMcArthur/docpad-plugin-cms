@@ -31,7 +31,7 @@
         <div class="container">
         <div class="site-logo"><a href="<%= @site.url %>"><%- @site.title %></a></div>
         <ul class="site-nav inline-block-list">
-            <li><a href="/cmsplus">Admin</a></li>
+            <li><a href="/cms">Admin</a></li>
             <li><a href="#">Link 2</a></li>
             <li><a href="#">Link 3</a></li>
         </ul>
