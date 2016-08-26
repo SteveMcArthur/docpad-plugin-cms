@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-cms",
-  "version": "3.0.0",
+  "version": "2.5.0",
   "description": "CMS for docpad",
   "homepage": "https://github.com/SteveMcArthur/docpad-plugin-cms",
   "keywords": [
