@@ -32,7 +32,9 @@
   },
   "dependencies": {
     "docpad": "6.78.1",
+    "docpad-plugin-authentication": "^2.4.2",
     "docpad-plugin-cleanurls": "^2.8.1",
+    "docpad-plugin-cms": "^2.5.1",
     "docpad-plugin-eco": "~2.1.0",
     "docpad-plugin-marked": "~2.3.0",
     "docpad-plugin-partials": "~2.9.2",
