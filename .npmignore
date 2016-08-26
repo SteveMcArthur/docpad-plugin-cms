@@ -20,7 +20,9 @@ Makefile
 BACKERS.md
 CONTRIBUTING.md
 HISTORY.md
-**/src/
+#only want to exclude the top level src directory
+#as we want to upload the template src directory
+src/
 **/test/
 *.bat
 
