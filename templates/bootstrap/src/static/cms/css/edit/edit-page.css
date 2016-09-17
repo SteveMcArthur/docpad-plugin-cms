@@ -13,7 +13,6 @@
 #edit-msg {
     position: fixed;
     /*    height: 200px;*/
-    
     width: 100%;
     background: none;
     color: #000;
@@ -176,12 +175,6 @@ div.meta-post {
 .panel {
     padding: 10px 15px;
 }
-/*
-#extruderLeft {
-    color: white;
-    padding: 5px;
-}
-*/
 
 .dash-container {
     color: white;
@@ -261,7 +254,7 @@ div.meta-post {
 }
 
 .post-editor {
-/*    margin-top: 1em;*/
+    /*    margin-top: 1em;*/
 }
 
 #post-title {
@@ -284,6 +277,7 @@ aside input[type="text"] {
 #feature-img {
     width: 100%;
 }
+
 .panel ul {
     list-style: none;
     margin-left: 0;
@@ -301,6 +295,7 @@ input {
 .wrap {
     margin-bottom: 1rem;
 }
+
 #slug {
     font-size: 16px;
 }

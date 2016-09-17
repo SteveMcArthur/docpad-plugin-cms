@@ -6,6 +6,7 @@ module.exports = (BasePlugin) ->
     ensurePaths = require('./helpers/ensurePaths')
     watchr = require('watchr')
     console.log(path.join(__dirname,'..','templates','bootstrap'))
+    thisPlugin = {name: "thisPlugin"}
 
     # Define Plugin
     class CmsPlugin extends BasePlugin
@@ -45,6 +46,7 @@ module.exports = (BasePlugin) ->
             super
             
             plugin = @
+            thisPlugin = @
 
             #setup data, versions and documents path
             ensurePaths(plugin.docpad,plugin)
@@ -55,30 +57,32 @@ module.exports = (BasePlugin) ->
             
             #plugin.watchTemplates()
         
-        #problem calculating outpath
         watchListener: (type,pathToFile) ->
             if type == "update"
-                console.log("Update to: "+pathToFile)
+                console.log("Update to: ")
+                console.log(pathToFile)
                 dirname = path.dirname(pathToFile)
                 outpath = ""
-                inpath = ""
-                if @tmpllayoutsDir.substr(dirname) == 0
-                    outpath = @layoutsPath
-                    inpath =  @tmpllayoutsDir
-                else if @tmplfilesDir.substr(dirname) == 0
-                    outpath = @filesPath
-                    inpath = @tmplfilesDir
-                else if @tmpldocsDir.substr(dirname) == 0
-                    outpath = @docsPath
-                    inpath = @tmpldocsDir
+
+                if pathToFile.indexOf(thisPlugin.tmpllayoutsDir) > -1
+                    filename = pathToFile.substr(thisPlugin.tmpllayoutsDir.length)
+                    outpath = path.join(thisPlugin.layoutsPath,filename)
+                else if  pathToFile.indexOf(thisPlugin.tmplfilesDir) > -1
+                    filename = pathToFile.substr(thisPlugin.tmplfilesDir.length)
+                    outpath = path.join(thisPlugin.filesPath,filename)
+                else if  pathToFile.indexOf(thisPlugin.tmpldocsDir) > -1
+                    filename = pathToFile.substr(thisPlugin.tmpldocsDir.length)
+                    outpath = path.join(thisPlugin.docsPath,filename)
                 if outpath
-                    console.log("Copy "+inpath)
+                    console.log("Copy "+pathToFile)
                     console.log("Copy to "+outpath)
-                    copy(pathToFile,outpath)
+                    #copy(pathToFile,outpath)
+        
                 
         
         watchTemplates: ->
             docpad = @docpad
+            plugin = @
             opts =
                 path: @getConfig().templateLocation
                 listener: @watchListener
@@ -156,7 +160,7 @@ module.exports = (BasePlugin) ->
                 auth = @loadedPlugins["authentication"]
                 auth.simpleMembership.getUsers()
                 
-            loadedPlugins: @docpad.loadedPlugins
+            loadedPlugins: @loadedPlugins
          
         extendTemplateData: (opts) ->
             templateData = opts.templateData

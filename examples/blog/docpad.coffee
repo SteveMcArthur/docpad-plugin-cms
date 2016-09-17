@@ -152,7 +152,7 @@ docpadConfig = {
     plugins:
 
         authentication:
-            #change this to '/admin/*' once
+            #change this to '/cms/*' once
             #client secret and client ID setup in
             #environment file
             protectedUrls: ['/test/*'],
