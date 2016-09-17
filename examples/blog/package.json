@@ -1,10 +1,11 @@
 {
-  "name": "docpad-site",
+  "name": "meat-candy",
   "version": "0.0.1",
   "private": true,
-  "description": "Docpad site",
-  "homepage": "https://github.com/SteveMcArthur/{name}",
+  "description": "Meat Candy example Docpad site - used for testing the docpad-plugin-cms plugin",
+  "homepage": "https://github.com/SteveMcArthur/docpad-plugin-cms/tree/master/examples/blog",
   "keywords": [
+    "cms plugin",
     "docpad-skeleton",
     "docpad",
     "website",
@@ -20,15 +21,15 @@
     "Steve McArthur <contact@stevemcarthur.co.uk> (http://www.stevemcarthur.co.uk)"
   ],
   "bugs": {
-    "url": "https://github.com/SteveMcArthur/{name}/issues"
+    "url": "https://github.com/SteveMcArthur/docpad-plugin-cms/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SteveMcArthur/{name}"
+    "url": "https://github.com/SteveMcArthur/docpad-plugin-cms"
   },
   "engines": {
-    "node": "^0.12.2",
-    "npm": "^2.76"
+    "node": "^4.4.6",
+    "npm": "^3.10.2"
   },
   "dependencies": {
     "docpad": "^6.78.0",

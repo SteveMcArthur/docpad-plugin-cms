@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-cms",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "description": "CMS for docpad",
   "homepage": "https://github.com/SteveMcArthur/docpad-plugin-cms",
   "keywords": [
@@ -25,7 +25,8 @@
     "url": "https://github.com/SteveMcArthur/docpad-plugin-cms.git"
   },
   "engines": {
-    "node": ">=0.8"
+    "node": "^4.4.6",
+    "npm": "^3.10.2"
   },
   "peerDependencies": {
     "docpad": "6",
