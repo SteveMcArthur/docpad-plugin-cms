@@ -1,0 +1,9 @@
+body {
+  background-color: #f1f2f6; }
+
+.contact-band {
+  padding: 40px 0;
+  background: #f1f2f6; }
+
+.contact-band .pad {
+  padding: 2em; }

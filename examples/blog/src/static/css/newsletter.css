@@ -1,0 +1,45 @@
+body {
+  background-color: #f1f2f6; }
+
+/* Newsletter*/
+#newsletter {
+  background: #085c7b;
+  padding: 20px 0;
+  padding: 10px 0 10px 0; }
+
+#newsletter h5 {
+  font-size: 20px;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  color: white;
+  line-height: 24px; }
+
+#newsletter p {
+  clear: both;
+  font-size: 13px;
+  padding-top: 2px;
+  color: white; }
+
+#newsletter a {
+  color: white; }
+
+#newsletter .margintop-20px {
+  margin-top: 20px; }
+
+#newsletter .row.collapse form input[type="text"] {
+  font-size: 17px;
+  font-weight: 200;
+  color: #999999;
+  border: 0; }
+
+#newsletter .row.collapse form .button {
+  border: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #257696; }
+
+#newsletter .row.collapse form .button:hover {
+  background: #074e68; }

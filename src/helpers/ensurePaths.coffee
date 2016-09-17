@@ -1,4 +1,4 @@
-fs = require('safefs')
+fs = require('fs')
 path = require('path')
 copy = require('fs-extra').copy
 
@@ -23,7 +23,7 @@ setupFolders = (docpad,plugin) ->
         if dirExists(item)
             plugin.documentsPath = path.join(item,tplFolder)
                     
-copyFiles = (plugin) ->
+copyFiles = (docpad,plugin) ->
     config = plugin.getConfig()
     templateLocation = config.templateLocation
     templateFolder = config.templateFolder
@@ -31,14 +31,14 @@ copyFiles = (plugin) ->
     plugin.tmplfilesDir = path.join(templateLocation,'src','static',templateFolder)
     plugin.tmpldocsDir = path.join(templateLocation,'src','render',templateFolder)
     if config.copyTemplates
-        console.log("Copy templates...")
+        docpad.log("info","Copying CMS templates...")
         copy(plugin.tmpllayoutsDir,plugin.layoutsPath)
         copy(plugin.tmplfilesDir,plugin.filesPath)
         copy(plugin.tmpldocsDir,plugin.documentsPath)
     
 ensurePaths = (docpad,plugin) ->
     setupFolders(docpad,plugin)
-    copyFiles(plugin)
+    copyFiles(docpad,plugin)
                     
                     
 module.exports = ensurePaths

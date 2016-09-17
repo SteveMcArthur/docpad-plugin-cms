@@ -1,0 +1,309 @@
+﻿body {
+	background: #7D1935;
+	color: #000;
+}
+
+.row {
+	min-width: 98% !important;
+	
+}
+
+.panel {
+	margin-bottom: 10px;
+	background: #942846;
+	border: 0;
+	color: #f2f2f2;
+	padding: 25px;
+	-moz-shadow: 0 2px 7px rgba(0,0,0,0.42);
+	-webkit-box-shadow: 0 2px 7px rgba(0,0,0,0.42);
+	-o-shadow: 0 2px 7px rgba(0,0,0,0.42);
+	box-shadow: 0 2px 7px rgba(0,0,0,0.42);
+}
+
+	.panel.img {
+		padding: 0;
+		text-align:center;
+	}
+
+		.panel.img img {
+			width: 100%;
+			height:100%;
+			
+		}
+
+	.panel.light {
+		background: #f2f2f2;
+		color: #555;
+	}
+
+		.panel.light p {
+			background: #f2f2f2;
+			color: #555;
+			text-rendering: auto;
+		}
+
+	.panel p {
+		color: #f2f2f2;
+		margin-top: 0;
+		padding-top: 0;
+		margin-bottom: 10px;
+		text-rendering: auto;
+	}
+
+	.panel section {
+		margin-bottom: 20px;
+	}
+
+a.blog:hover {
+	background: #7D1935;
+}
+
+label {
+	font-size: 1em;
+	color: #f2f2f2;
+}
+
+
+.panel h3,
+.panel h4,
+.panel h5 {
+	margin-bottom: 22px;
+}
+
+.panel.light h3,
+.panel.light h4,
+.panel.light h5 {
+	color: #7D1935;
+}
+
+
+/* .catlink */
+.catlink {
+	background: #7D1935;
+	color: #fafafa;
+	font-size: 11px;
+	padding: 3px 5px;
+	margin: 0 0 0 6px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	text-decoration: none;
+}
+
+	/* .catlink =skins */
+	.catlink:hover {
+		background: #506b80; /* Standard dev */
+		color: #fff;
+		text-decoration: none;
+	}
+
+
+.commentlink {
+	float: right;
+	background: url(/img/sprites-plum.png) -309px -9px no-repeat;
+	width: 30px;
+	text-align: center;
+	font-weight: bold;
+	color: #313639;
+	margin-top: 0;
+	padding-bottom: 4px;
+	font-size: 11px;
+	text-decoration: none;
+}
+
+	.commentlink:hover {
+		text-decoration: none;
+	}
+
+
+small {
+	color: #aaa;
+	font-size: 12px;
+	font-weight: 300;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: none;
+}
+
+.columns {
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.top-bar {
+	background: #171717;
+	background: rgb(23,23,23);
+	background: rgba(23,23,23,0.7);
+	height: 60px;
+	padding-top: 7px;
+}
+
+	.top-bar .name, .top-bar .loc {
+		background: none;
+	}
+
+
+
+li.menu-icon i {
+	color: #aaa;
+}
+
+	li.menu-icon i:hover {
+		color: white;
+	}
+
+	li.menu-icon i.icon-active {
+		color: white;
+	}
+
+.top-bar-section li.menu-icon.active > a {
+	background: none;
+}
+
+li.menu-icon.active i {
+	color: #2ba6cb;
+}
+
+
+.hidden {
+	display: none;
+}
+
+.top-bar-section ul {
+	background: none;
+}
+
+.top-bar-section li a:not(.button) {
+	background: none;
+}
+
+.top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
+	border-right: solid 1px #7D1935;
+	border-left: solid 1px #7D1935;
+}
+
+[class*="foundicon-"] {
+	font-size: 2em;
+}
+
+h2.headline {
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 0;
+	padding-bottom: 25px;
+}
+
+span.name {
+	display: none;
+}
+
+.twitter-feed li {
+	border-bottom: 1px solid #aaa;
+}
+
+img {
+	margin-bottom: 5px;
+}
+
+.row-1 {
+	height: 240px;
+}
+
+.row-2 {
+	height: 490px;
+}
+
+.portfolio-image.sml {
+	display: none;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+	.top-bar .name h1 a {
+		width: 75%;
+	}
+
+	span.name {
+		display: inline;
+	}
+
+	ul.right {
+		display: none;
+	}
+
+	.panel h3,
+	.panel h4,
+	.panel h5 {
+		margin-bottom: 15px;
+	}
+
+	.panel {
+		padding: 25px 20px 25px 20px;
+	}
+	/**
+	.row-2 {
+		height: 380px;
+	}
+
+	.row-1.contact {
+		height: 280px;
+	}
+	**/
+	/*.row-1 {
+		height: 100%;
+	}
+		*/
+		.panel.img img {
+			width:auto;
+		}
+
+	.row-2 {
+		height: 100%;
+	}
+
+	.row-1.contact {
+		height: 100%;
+	}
+
+	.portfolio-image.sml {
+		display: inline-block;
+	}
+
+	.portfolio-image.lge {
+		display: none;
+	}
+
+	.panel.img img {
+		margin-bottom: 0;
+	}
+	h2.headline{
+		font-size:19px;
+	}
+	#centre-col .img.row-2{
+		height:490px;
+	}
+	#centre-col .panel.row-1{
+		height:100%;
+	}
+}
+
+@media only screen and (max-width: 240px) {
+
+	.contact a {
+		font-size: 13px;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.panel h4 {
+		font-size: 24px;
+	}
+
+	.panel h5 {
+		font-size: 20px;
+	}
+	div.summary-content{
+		font-size:13px;
+	}
+}

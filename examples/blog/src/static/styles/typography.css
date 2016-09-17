@@ -1,0 +1,86 @@
+﻿body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+p, .panel p, .panel {
+	/*font-family: Lato, Arial, serif;*/
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	font-weight:400;
+	line-height: 24px;
+}
+
+	.panel h3,
+	.panel h4,
+	.panel h5,
+	.panel h6,
+	.panel h3 a,
+	.panel h4 a,
+	.panel h5 a {
+		color: #f2f2f2;
+		font-weight: 300;
+		font-style: normal;
+		font-family: 'Open Sans', sans-serif;
+		margin-top: 0;
+	}
+
+	.panel h4 {
+		font-size: 34px;
+	}
+
+	.panel h5 {
+		margin-bottom: 0;
+		font-size: 24px;
+	}
+
+.top-bar .name h1 a, .top-bar .loc {
+	background: none;
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+}
+
+#menu-titles .name h1 a {
+	font-weight: 500;
+}
+
+h2.headline {
+	line-height: 36px;
+	font-size: 22px;
+	font-weight: 200;
+	color: #f2f2f2;
+	text-align: center;
+	/*font-family: Lato, Arial, serif;*/
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.twitter-date, .summary-date {
+	text-align:right;
+	color: #aaa;
+	font-size:11px;
+}
+.side-nav li a {
+	font-size:14px;
+}
+
+.title {
+	display:inline;
+}
+.summary-date {
+	/*float:right;*/
+}
+
+@media only screen and (max-width: 767px) {
+	.panel h4 {
+		font-size: 26px;
+	}
+	h2.headline {
+		line-height:27px;
+		font-size:20px;
+	}
+
+
+
+}

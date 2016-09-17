@@ -1,0 +1,77 @@
+﻿#homepage-hero {
+	background: #074e68;
+	height: 650px;
+	text-align: left;
+	position: relative;
+	padding: 100px 20px 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+	#homepage-hero {
+		padding: 40px 5px 30px 5px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	#homepage-hero {
+		height: 500px;
+	}
+}
+
+#homepage-hero h1 {
+	font-size: 4em;
+	color: white;
+	font-weight: 500;
+	margin-bottom: 0;
+	line-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+	#homepage-hero h1 {
+		font-size: 50px;
+	}
+}
+
+#homepage-hero h4 {
+	font-size: 1.35em;
+	color: white;
+	font-weight: 300;
+}
+
+#homepage-hero h3 {
+	color: white;
+}
+
+@media screen and (max-width: 768px) {
+	#homepage-hero h3 {
+		font-size: 18px;
+		line-height: 28px;
+	}
+}
+
+#homepage-hero .floatingyeti img {
+	max-width: 50%;
+	position: absolute;
+	right: 100px;
+	top: 30px;
+}
+
+@media only screen and (max-width: 40em) {
+	#homepage-hero .floatingyeti img {
+		width: 100%;
+		position: relative;
+		right: 0;
+		bottom: 0px;
+		top: 0px;
+		left: 120px;
+	}
+}
+
+@media only screen and (min-width:40.063em) and (max-width:64em) {
+	#homepage-hero .floatingyeti img {
+		width: 100%;
+		position: absolute;
+		right: 0;
+		bottom: 0px;
+	}
+}

@@ -1,0 +1,166 @@
+﻿body {
+	background: #7D1935;
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 80px;
+}
+.spacer{
+	height:66px;
+}
+
+.row {
+	max-width:68em;
+	
+}
+.columns {
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.panel {
+	margin-bottom: 10px;
+}
+
+h2.headline {
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left:10px;
+	margin-bottom: 0;
+	padding-bottom: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+
+	#first-col .row-2 {
+		height: 662px;
+	}
+	#message {
+		height:5.12em;
+	}
+}
+
+
+.panel {
+	background: #942846;
+	color: #f2f2f2;
+	border: 0;
+	-moz-shadow: 0 2px 7px rgba(0,0,0,0.42);
+	-webkit-box-shadow: 0 2px 7px rgba(0,0,0,0.42);
+	-o-shadow: 0 2px 7px rgba(0,0,0,0.42);
+	box-shadow: 0 2px 7px rgba(0,0,0,0.42);
+}
+
+	.panel.img {
+		padding: 0;
+		text-align: center;
+	}
+
+		.panel.img img {
+			width: 100%;
+			height: 100%;
+		}
+
+	.panel.light {
+		background: #f2f2f2;
+		color: #555;
+	}
+
+		.panel.light p {
+			background: #f2f2f2;
+			color: #555;
+			text-rendering: auto;
+		}
+
+	.panel p {
+		color: #f2f2f2;
+		text-rendering: auto;
+	}
+
+a.blog:hover {
+	background: #7D1935;
+}
+
+label {
+	color: #f2f2f2;
+}
+
+span.name {
+	display: none;
+}
+
+.panel.light h3,
+.panel.light h4,
+.panel.light h5 {
+	color: #7D1935;
+}
+
+.top-bar {
+	background: #171717;
+	background: rgb(23,23,23);
+	background: rgba(23,23,23,0.7);
+	height: 60px;
+	padding-top: 7px;
+}
+
+	.top-bar .name, .top-bar .loc {
+		background: none;
+	}
+
+li.menu-icon i {
+	color: #aaa;
+}
+
+	li.menu-icon i:hover {
+		color: white;
+	}
+
+	li.menu-icon i.icon-active {
+		color: white;
+	}
+
+.top-bar-section li.menu-icon.active > a {
+	background: none;
+}
+
+li.menu-icon.active i {
+	color: #2ba6cb;
+}
+
+
+.hidden {
+	display: none;
+}
+
+.top-bar-section ul {
+	background: none;
+}
+
+.top-bar-section li a:not(.button) {
+	background: none;
+}
+
+.top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
+	border-right: solid 1px #7D1935;
+	border-left: solid 1px #7D1935;
+}
+
+[class*="foundicon-"] {
+	font-size: 2em;
+}
+
+#contact_form_id {
+	margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+	.top-bar .name h1 a {
+		width: 75%;
+	}
+
+	span.name {
+		display: inline;
+	}
+
+	ul.right {
+		display: none;
+	}
+}

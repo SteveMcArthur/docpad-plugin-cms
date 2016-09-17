@@ -1,0 +1,135 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', sans-serif;
+}
+
+#homepage-hero {
+	height: 320px;
+	/*background: url(../svg/marquee-stars2.svg) #942846;*/
+	/*background-color: #942846;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgoJPGRlZnM+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MnIHdpZHRoPSczMCcgaGVpZ2h0PScyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDMwIDIwJz4KCQkJPHBhdGggZD0nTTAsMTBoNWw1LC0xMGgxMGw1LDEwaDVtLTUsMGwtNSwxMGgtMTBsLTUsLTEwJyBzdHJva2U9JyM0NTEzMjEnIHN0cm9rZS13aWR0aD0nLjUnIGZpbGwtb3BhY2l0eT0nMCcgLz4KCQk8L3BhdHRlcm4+CgkJPHJhZGlhbEdyYWRpZW50IGlkPSdnJyBncmFkaWVudFVuaXRzPSd1c2VyU3BhY2VPblVzZScgY3g9JzUwJScgY3k9JzUwJScgcj0nNjAlJyBmeD0nMjYlJyBmeT0nMzIlJz4KCQkJPHN0b3Agb2Zmc2V0PScwJScgc3RvcC1vcGFjaXR5PScwJyBzdG9wLWNvbG9yPScjZTA4MDliJyAvPgoJCQk8c3RvcCBvZmZzZXQ9JzEwMCUnIHN0b3Atb3BhY2l0eT0nLjknIHN0b3AtY29sb3I9JyM5NDI4NDYnIC8+CgkJPC9yYWRpYWxHcmFkaWVudD4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYyknLz4KCTxyZWN0IHdpZHRoPScxMjAlJyB4PSctMTAlJyB5PSctMTAlJyBoZWlnaHQ9JzEyMCUnIGZpbGw9J3VybCgjZyknLz4KPC9zdmc+');*/
+	background-color: #942846;
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnPgoJPGRlZnM+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MnIHdpZHRoPSczMCcgaGVpZ2h0PScyMCcgeD0nMCcgeT0nMCcgdmlld0JveD0nMCAwIDMwIDIwJz4KCQkJPHBhdGggZD0nTTAsMTBoNWw1LC0xMGgxMGw1LDEwaDVtLTUsMGwtNSwxMGgtMTBsLTUsLTEwJyBzdHJva2U9JyMyNDBBMTEnIHN0cm9rZS13aWR0aD0nLjUnIGZpbGwtb3BhY2l0eT0nMCcgLz4KCQk8L3BhdHRlcm4+CgkJPHJhZGlhbEdyYWRpZW50IGlkPSdnJyBncmFkaWVudFVuaXRzPSd1c2VyU3BhY2VPblVzZScgY3g9JzUwJScgY3k9JzUwJScgcj0nNjAlJyBmeD0nMjYlJyBmeT0nMzIlJz4KCQkJPHN0b3Agb2Zmc2V0PScwJScgc3RvcC1vcGFjaXR5PScwJyBzdG9wLWNvbG9yPScjZTA4MDliJyAvPgoJCQk8c3RvcCBvZmZzZXQ9JzEwMCUnIHN0b3Atb3BhY2l0eT0nLjknIHN0b3AtY29sb3I9JyM5NDI4NDYnIC8+CgkJPC9yYWRpYWxHcmFkaWVudD4KCTwvZGVmcz4KCTxyZWN0IHdpZHRoPScxMDAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYyknLz4KCTxyZWN0IHdpZHRoPScxMjAlJyB4PSctMTAlJyB5PSctMTAlJyBoZWlnaHQ9JzEyMCUnIGZpbGw9J3VybCgjZyknLz4KPC9zdmc+');
+}
+
+	#homepage-hero .centered-text {
+		color: white;
+		text-align: center;
+	}
+
+		#homepage-hero .centered-text h2 {
+			color: white;
+		}
+
+.align-bottom {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: -15px;
+}
+
+#main-content h2 {
+	color: #942846;
+}
+
+.bigtext {
+	font-family: 'Roboto', sans-serif;
+	color: #222222;
+	text-rendering: optimizeLegibility;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 1.4375rem;
+}
+
+
+
+#homepage-hero h1 {
+	font-family: 'Bowlby One SC', cursive;
+	font-weight: 400;
+	font-size: 5em;
+}
+
+.top-bar .name h1 a {
+	font-weight: 400;
+	font-size: 2em;
+	font-family: 'Bowlby One SC', cursive;
+}
+
+
+.panel {
+	background: none;
+	border: 0;
+	color: #555;
+	margin-bottom: 10px;
+	font-family: 'Roboto', sans-serif;
+}
+
+	.panel.img {
+		padding: 0;
+		text-align: center;
+	}
+
+		.panel.img img {
+			width: 100%;
+			height: 100%;
+		}
+
+	.panel.light {
+		background: #f2f2f2;
+		color: #555;
+	}
+
+		.panel.light p {
+			background: #f2f2f2;
+			color: #555;
+			text-rendering: auto;
+		}
+
+	.panel p {
+		color: #555;
+		text-rendering: auto;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
+		color: #942846;
+		font-weight: 400 !important;
+		font-family: 'Roboto', sans-serif;
+	}
+
+button, .button {
+	color: white;
+	background-color: #942846;
+	border-color: #942846;
+}
+
+	button:hover, button:focus, .button:hover, .button:focus {
+		background-color: #D13963;
+	}
+
+.panel .button {
+	line-height: 21px;
+	padding: 6px 28px;
+}
+
+#newsletter {
+	background: #942846;
+}
+
+.page-footer-top.bg-magenta {
+	background: #7D1935;
+	/*background: #942846;*/
+}
+
+
+li.name{
+	font-family: 'Bowlby One SC', cursive;
+	color: white;
+}
+
+@media screen and (max-width: 1024px) {
+	#homepage-hero {
+		height: 250px;
+	}
+}

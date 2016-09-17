@@ -1,0 +1,674 @@
+﻿html, body {
+  font-size: 100%; }
+
+body {
+  background: white;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  cursor: default; }
+
+.row {
+	max-width:75em;	
+}
+
+
+
+#main-content .pricing h4 {
+  margin-bottom: 0;
+  text-align: center; }
+
+#main-content {
+  margin: 44px 0 22px;
+  padding-bottom: 22px;
+  /* Tools-Community Page */
+  /*Github Issues*/
+  /*Case Studies*/
+  /* Contribute Home */ }
+  @media screen and (max-width: 768px) {
+    #main-content {
+      margin: 20px 0 20px;
+      padding-bottom: 0px; } }
+  #main-content h1, #main-content h2, #main-content h3, #main-content h4 {
+    font-style: normal;
+    font-weight: 300; }
+  #main-content h2 {
+    margin-bottom: 0px; }
+    @media screen and (max-width: 768px) {
+      #main-content h2 {
+        font-size: 25px;
+        line-height: 30px; } }
+  #main-content h4 {
+    margin-bottom: 20px; }
+    @media screen and (max-width: 768px) {
+      #main-content h4 {
+        margin-top: 10px;
+        font-size: 18px;
+        line-height: 20px; } }
+  #main-content h5 {
+    font-weight: 400;
+    line-height: 25px;
+    margin-top: 35px; }
+  #main-content p {
+    font-color: #666666 !important; }
+  @media screen and (max-width: 768px) {
+    #main-content .text-center-on-small {
+      text-align: center; } }
+  #main-content .right-text {
+    text-align: right; }
+  #main-content .centered-text {
+    text-align: center; }
+  #main-content .headspace-10 {
+    margin-top: 10px; }
+  #main-content .headspace-20 {
+    margin-top: 20px; }
+  #main-content .margin-bottom-minus-20px {
+    margin-bottom: -20px; }
+  #main-content .margin-top-minus-44px {
+    margin-top: -44px; }
+  #main-content .margin-40px {
+    margin: 40px 0; }
+  #main-content .margin-top-40px {
+    margin-top: 40px; }
+  #main-content .margin-bottom-40px {
+    margin-bottom: 40px; }
+  #main-content .smallicons img {
+    max-width: 25px;
+    margin: 3px 0 5px 0;
+    position: absolute; }
+  #main-content .smallicons h4 {
+    padding-bottom: 20px; }
+  #main-content .smallicons h5, #main-content .smallicons p {
+    padding-left: 40px; }
+  #main-content .supporticons {
+    text-align: center; }
+    #main-content .supporticons img {
+      padding: 20px;
+      max-height: 200px; }
+  #main-content .smallfeaturesicons img {
+    position: relative;
+    height: 38px;
+    max-width: 38px;
+    margin-top: 10px; }
+  #main-content .smallfeaturesicons h5, #main-content .smallfeaturesicons p {
+    margin-top: 10px;
+    padding-left: 0px; }
+  @media screen and (max-width: 768px) {
+    #main-content .smallfeaturesicons img {
+      position: absolute;
+      height: 30px;
+      max-width: 30px;
+      margin-top: auto; }
+    #main-content .smallfeaturesicons h5, #main-content .smallfeaturesicons p {
+      margin-top: 0px;
+      padding-left: 40px; } }
+  #main-content .toolslist ul, #main-content .toolslist li, #main-content .toolslist ol, #main-content .toolslist dl {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px; }
+  #main-content #githubissues {
+    padding: 15px 0px; }
+  #main-content #githubissues p.commit {
+    line-height: 18px; }
+  #main-content #githubissues h4 {
+    font-size: 13px !important; }
+  #main-content #githubissues .commit {
+    margin-top: 8px;
+    color: white;
+    opacity: 0.7;
+    float: left; }
+  #main-content #githubissues span.date, #main-content #github #github a {
+    color: white;
+    font-size: 12px !important;
+    white-space: break-word;
+    line-height: 1.3;
+    margin-bottom: 3px; }
+  #main-content #githubissues a.commit {
+    color: white;
+    font-weight: 300;
+    font-size: 13px !important;
+    word-break: break-word;
+    white-space: break-word;
+    top: 10px;
+    word-wrap: break-word;
+    opacity: 0.7;
+    position: relative; }
+    @media only screen and (max-width: 767px) {
+      #main-content #githubissues a.commit {
+        top: auto; } }
+  #main-content #githubissues a.button {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    float: right;
+    width: auto;
+    margin-top: 4px; }
+   
+  #main-content #github {
+    padding: 15px 0; }
+  #main-content #github h4 {
+    color: white;
+    opacity: 0.7;
+    float: left;
+    font-size: 13px; }
+  #main-content #github span, #main-content #github #github a {
+    color: white;
+    font-size: 13px;
+    white-space: break-word;
+    line-height: 1.3;
+    margin-bottom: 3px; }
+  #main-content #github span.date {
+    text-transform: uppercase;
+    top: 13px;
+    position: relative;
+    font-size: 12px !important; }
+  #main-content #github a.commit {
+    color: white;
+    font-weight: 300;
+    font-size: 12px;
+    font-size: 13px;
+    word-break: break-word;
+    white-space: break-word;
+    word-wrap: break-word;
+    opacity: 0.7;
+    top: 13px;
+    position: relative; }
+  #main-content #github a.button {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    float: right;
+    width: auto;
+    margin-top: 4px; } 
+  #main-content #sideDeviceiPad {
+    max-width: 140%; }
+  #main-content #sideDeviceDesktop {
+    max-width: 240%; }
+  @media only screen and (max-width: 767px) {
+    #main-content #sideDeviceDesktop {
+      max-width: 100%; }
+    #main-content #sideDeviceiPad {
+      max-width: 100%; } }
+  #main-content header#home {
+    background-position: center bottom;
+    padding: 120px 0 220px;
+    background-repeat: no-repeat;
+    }
+    @media screen and (max-width: 768px) {
+      #main-content header#home {
+        height: 595px;
+        padding: 20px 0 220px; } }
+  #main-content header#home input {
+    height: 45px; }
+  #main-content header#home h4 {
+    line-height: 30px;
+    margin-bottom: 44px; }
+  #main-content header#home .button {
+
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+    #main-content header#home .button:hover {
+      background: #006582; }
+    #main-content header#home .button.secondary {
+      background: #248cac;
+      background: rgba(0, 0, 0, 0.15);
+      color: #9ccbd9;
+      color: rgba(255, 255, 255, 0.55); }
+      #main-content header#home .button.secondary.small {
+        padding: 5px 8px 6px; }
+    #main-content header#home .button.secondary:hover {
+      background: #207c98;
+      background: rgba(0, 0, 0, 0.25);
+      color: rgba(255, 255, 255, 0.75); }
+
+
+#main-content .the-numbers h2 {
+  margin-bottom: 40px; }
+
+#main-content .the-numbers .stats h2 {
+  margin-bottom: 0px; }
+
+@media screen and (max-width: 768px) {
+  #main-content .the-numbers .stats h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px; } }
+
+
+
+.githubissues {
+  background: #085a78;
+	padding: 15px 0px;
+  height: 70px; }
+
+.githubissues h4 {
+  color: white;
+  opacity: 0.7;
+  float: left;
+  width: 150px;
+  font-size: 12px; }
+
+.githubissues span, #github #github a {
+  color: white;
+  font-size: 12px;
+  font-size: 1.2rem;
+  white-space: break-word;
+  line-height: 1.3;
+  margin-bottom: 3px; }
+
+.githubissues a.commit {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  word-break: break-word;
+  white-space: break-word;
+  top: 10px;
+  word-wrap: break-word;
+  opacity: 0.7;
+  position: relative; }
+  @media only screen and (max-width: 767px) {
+    .githubissues a.commit {
+      top: auto; } }
+
+.githubissues a.button {
+  background: #137795;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  float: right;
+  width: auto;
+  margin-top: -4px;
+  font-size: 14px; }
+  .githubissues a.button:hover {
+    background: #006582; }
+
+
+
+/* Newsletter*/
+#newsletter {
+  background: #085a78;
+	padding: 20px 0;
+  padding: 10px 0 10px 0; }
+  #newsletter h5 {
+    font-size: 20px;
+    font-family: "OpenSans", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    color: white;
+    line-height: 24px; }
+  #newsletter p {
+    clear: both;
+    font-size: 13px;
+    padding-top: 2px;
+    color: white; }
+  #newsletter a {
+    color: white; }
+  #newsletter .margintop-20px {
+    margin-top: 20px; }
+  #newsletter .row.collapse form input[type="text"] {
+    font-size: 17px;
+    font-weight: 200;
+    color: #999999;
+    border: 0; }
+  #newsletter .row.collapse form .button {
+    border: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #257696; }
+  #newsletter .row.collapse form .button:hover {
+    background: #1b566d; }
+
+/*Global Footer*/
+.page-footer-top {
+  padding: 40px 0;
+  color: white; }
+  .page-footer-top .row .columns {
+    *zoom: 1; }
+    .page-footer-top .row .columns:before, .page-footer-top .row .columns:after {
+      content: " ";
+      display: table; }
+    .page-footer-top .row .columns:after {
+      clear: both; }
+  .page-footer-top.site {
+    background-position: 10px 7px; }
+  .page-footer-top .property {
+    text-align: center; }
+    .page-footer-top .property .property-info {
+      padding-top: 37px; }
+    .page-footer-top .property h2 {
+      margin: 0;
+      padding: 0 !important; }
+      .page-footer-top .property h2 a {
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        font-family: "site-logo";
+        font-weight: normal;
+        font-size: 1.125rem;
+        padding: 0; }
+        .page-footer-top .property h2 a:hover {
+          opacity: 0.8;
+          filter: alpha(opacity=80); }
+        .page-footer-top .property h2 a.services {
+          width: 190px; }
+        .page-footer-top .property h2 a span {
+          display: none; }
+        .page-footer-top .property h2 a strong {
+          font-size: 17px;
+          margin-left: -7px; }
+    .page-footer-top .property h3 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 20px; }
+    .page-footer-top .property h4 {
+      font-size: 1.1rem;
+      font-weight: 200;
+      color: white;
+      margin-bottom: 10px; }
+    .page-footer-top .property p, .page-footer-top .property li, .page-footer-top .property a {
+      font-size: 13px;
+      line-height: 21px;
+      color: white; }
+    .page-footer-top .property a {
+      font-weight: bold;
+      color: white; }
+  .page-footer-top .learn-links, .page-footer-top .support-links, .page-footer-top .connect-links {
+    padding: 50px 0 0 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    background: url(../img/footer-top-icons.png) no-repeat center 0;
+    height: 220px;
+    margin-bottom: 30px; }
+    .page-footer-top .learn-links ul, .page-footer-top .support-links ul, .page-footer-top .connect-links ul {
+      margin-left: 0px !important;
+      list-style: none; }
+      .page-footer-top .learn-links ul li, .page-footer-top .support-links ul li, .page-footer-top .connect-links ul li {
+        line-height: 20px; }
+  .page-footer-top .learn-links {
+    background-position: center -325px; }
+  .page-footer-top .support-links {
+    background-position: center -635px; }
+  .page-footer-top .connect-links {
+    padding: 50px 20px 0;
+    background-position: center -9px; }
+    .page-footer-top .connect-links .button {
+      font-size: 12px;
+      font-weight: normal;
+      background: rgba(0, 0, 0, 0.1);
+      color: white !important;
+      font-weight: bold;
+      text-shadow: none;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      border: none;
+      padding: 6px 16px; }
+  .page-footer-top .global {
+    border-top: 1px solid rgba(255, 255, 255, 0.2); }
+    .page-footer-top .global .footer-link-block {
+      font-weight: normal;
+      display: block;
+      margin: 30px 0 0 0; }
+      .page-footer-top .global .footer-link-block.services {
+        background: url("../img/footer-studios.png") left top no-repeat; }
+      .page-footer-top .global .footer-link-block.foundation {
+        background: url("../img/footer-foundation.png") left top no-repeat; }
+      .page-footer-top .global .footer-link-block.apps {
+        background: url("../img/footer-products.png") left top no-repeat; }
+      .page-footer-top .global .footer-link-block.expo {
+        background: url("../img/footer-expo.png") left top no-repeat; }
+      .page-footer-top .global .footer-link-block span {
+        display: block;
+        color: white;
+        font-size: 0.75rem;
+        padding-left: 40px;
+        line-height: 18px; }
+        .page-footer-top .global .footer-link-block span.title {
+          font-size: 1rem;
+          margin-bottom: 5px; }
+
+.page-footer-bottom {
+  background: #333333;
+  padding: 24px 0 10px; }
+  .page-footer-bottom .design-border {
+    border-bottom: 1px solid #484848;
+    padding-bottom: 5px;
+    margin-bottom: 25px; }
+  .page-footer-bottom a.site-logo {
+    color: #858585;
+    font-weight: normal;
+    background: url("../img/footer-icons.png") no-repeat 0 3px;
+    padding: 23px 0 0 0;
+    font-size: 1rem;
+    display: inline-block;
+    width: 90px; }
+    .page-footer-bottom a.site-logo:hover {
+      opacity: 0.8;
+      filter: alpha(opacity=80); }
+  .page-footer-bottom ul.site-links {
+    margin: 0;
+    display: inline-block;
+    padding-bottom: 0px; }
+    .page-footer-bottom ul.site-links li {
+      display: block;
+      float: left;
+      margin-right: 6px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 0.75rem; }
+	.page-footer-bottom ul.site-links {
+		font-family: 'Orbitron', sans-serif;
+		font-weight:700;
+	}
+      .page-footer-bottom ul.site-links li a {
+        color: #666666;
+        padding: 3px 6px; }
+        .page-footer-bottom ul.site-links li a:hover {
+          color: #777777; }
+  .page-footer-bottom p.copyright {
+    margin: 6px 0 0;
+    font-size: 0.75rem;
+    color: #666666; }
+  .page-footer-bottom ul.home-social {
+    display: block;
+    float: right;
+    margin-bottom: 8px; }
+    .page-footer-bottom ul.home-social li {
+      list-style: none;
+      display: block;
+      float: left;
+      margin-left: 10px; }
+      .page-footer-bottom ul.home-social li:first-child {
+        margin-left: 0; }
+      .page-footer-bottom ul.home-social li a {
+        display: block;
+        height: 50px;
+        width: 50px;
+        background: url("img/social.png") no-repeat center 0; }
+        .page-footer-bottom ul.home-social li a:hover {
+          opacity: 0.8;
+          filter: alpha(opacity=80); }
+        .page-footer-bottom ul.home-social li a.twitter {
+          background-position: center 0; }
+        .page-footer-bottom ul.home-social li a.facebook {
+          background-position: center -200px; }
+        .page-footer-bottom ul.home-social li a.mail {
+          background-position: center -400px; }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .page-footer-top .property {
+    padding-top: 0px; }
+    .page-footer-top .property .learn-links, .page-footer-top .property .support-links, .page-footer-top .property .connect-links {
+      height: 240px;
+      padding: 50px 10px 0; } }
+
+@media only screen and (max-width: 40em) {
+  .page-footer-top .property .property-info {
+    padding-top: 0px; }
+  .page-footer-top .property .learn-links, .page-footer-top .property .support-links, .page-footer-top .property .connect-links {
+    border: none;
+    height: auto;
+    padding: 80px 20px 0;
+    margin: 4px 0 0 0;
+    border-top: 1px dotted rgba(255, 255, 255, 0.2); }
+    .page-footer-top .property .learn-links li a, .page-footer-top .property .support-links li a, .page-footer-top .property .connect-links li a {
+      font-size: 15px;
+      line-height: 2; }
+    .page-footer-top .property .learn-links p, .page-footer-top .property .learn-links a, .page-footer-top .property .support-links p, .page-footer-top .property .support-links a, .page-footer-top .property .connect-links p, .page-footer-top .property .connect-links a {
+      font-size: 16px; }
+  .page-footer-top .property .learn-links {
+    background-position: center -300px;
+    padding-top: 76px 20px 0; }
+  .page-footer-top .property .support-links {
+    padding: 76px 20px 0;
+    background-position: center -618px; }
+  .page-footer-top .property .connect-links {
+    padding: 76px 20px 14px;
+    background-position: center 10px; }
+  .page-footer-top .global {
+    border: none; }
+  .page-footer-top .footer-link-block span {
+    font-size: 0.6875rem;
+    line-height: 16px; }
+  .page-footer-top .footer-link-block.services {
+    border-top: 1px dotted rgba(255, 255, 255, 0.2);
+    padding-top: 40px;
+    margin-top: 0;
+    background-position: center 10px !important; }
+  .page-footer-bottom {
+    text-align: center; }
+    .page-footer-bottom .columns {
+      padding: 0; }
+    .page-footer-bottom a.site-logo {
+      display: block;
+      margin: 0 auto; }
+    .page-footer-bottom ul.site-links {
+      margin: 16px 0 10px; }
+    .page-footer-bottom ul.home-social {
+      float: none;
+      margin: 0 0 20px 0;
+      text-align: center;
+      height: 44px;
+      display: inline-block; } }
+
+/* Reformating pillars */
+@media only screen and (max-width: 40em) {
+  .page-footer-top .property .connect-links {
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px; }
+  .page-footer-top .global .footer-link-block {
+    padding-top: 50px;
+    text-align: center;
+    margin: 0 !important;
+    clear: both; }
+    .page-footer-top .global .footer-link-block span {
+      padding-left: 0px; }
+    .page-footer-top .global .footer-link-block.services {
+      border-top: 0;
+      background-position: center 15px !important; }
+    .page-footer-top .global .footer-link-block.foundation {
+      background-position: center 15px !important; }
+    .page-footer-top .global .footer-link-block.apps {
+      padding-top: 80px;
+      background-position: center 45px !important; }
+    .page-footer-top .global .footer-link-block.expo {
+      padding-top: 80px;
+      background-position: center 45px !important; }
+  .page-footer-top .property .learn-links {
+    background: none;
+    border: none;
+    padding-top: 0;
+    margin: 0; } }
+
+/* Retina Images */
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .page-footer-top .info-padding {
+    background-image: url("../img/footer-large-icon-retina.png");
+    background-size: 100px 400px; }
+  .page-footer-bottom ul.home-social li a {
+    background-image: url("img/social-retina.png");
+    background-size: 50px 600px; }
+  .page-footer-top .global .footer-link-block {
+    font-weight: normal;
+    display: block;
+    margin: 30px 0 0 0; }
+    .page-footer-top .global .footer-link-block.services {
+      background: url("../img/footer-studios-retina.png") left top no-repeat; }
+    .page-footer-top .global .footer-link-block.foundation {
+      background-image: url("../img/footer-foundation-retina.png") left top no-repeat; }
+    .page-footer-top .global .footer-link-block.apps {
+      background-image: url("../img/footer-products-retina.png") left top no-repeat; }
+    .page-footer-top .global .footer-link-block.expo {
+      background-image: url("../img/footer-expo-retina.png") left top no-repeat; }
+  .page-footer-bottom a.site-logo {
+    background-image: url("../img/footer-icons-retina.png");
+    background-size: 100px 1400px; }
+  .page-footer-top .property .learn-links, .page-footer-top .property .support-links, .page-footer-top .property .connect-links {
+    background-image: url("icons/footer-top-icons-retina.png");
+    background-size: 100px 1400px; } }
+
+@media only screen and (max-width: 320px), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .page-footer-top .info-padding {
+    background-image: url("img/footer-large-icon-retina.png");
+    background-size: 100px 400px; }
+  .page-footer-bottom ul.home-social li a {
+    background-image: url("img/social-retina.png");
+    background-size: 50px 600px; }
+  .page-footer-top .global .footer-link-block {
+    font-weight: normal;
+    display: block;
+    margin: 30px 0 0 0; }
+    .page-footer-top .global .footer-link-block.services {
+      background: url("../img/footer-studios-retina.png") left top no-repeat;
+      background-size: 30px; }
+    .page-footer-top .global .footer-link-block.foundation {
+      background: url("../img/footer-foundation-retina.png") left top no-repeat;
+      background-size: 30px; }
+    .page-footer-top .global .footer-link-block.apps {
+      background: url("../img/footer-products-retina.png") left top no-repeat;
+      background-size: 30px; }
+    .page-footer-top .global .footer-link-block.expo {
+      background: url("../img/footer-expo-retina.png") left top no-repeat;
+      background-size: 30px; }
+  .page-footer-bottom a.site-logo {
+    background-image: url("../img/footer-icons-retina.png");
+    background-size: 100px 1400px; }
+  .page-footer-top .property .support-links, .page-footer-top .property .connect-links {
+    background-image: url("../-top-icons-retina.png");
+    background-size: 100px 1400px; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .page-footer-top .property .learn-links {
+    background: none; } }
+
+.page-footer-top.bg-blue {
+  background: #2daebf; }
+.page-footer-top.bg-fblue {
+  background: #074e68; }
+.page-footer-top.bg-green {
+  background: #b8d30b; }
+.page-footer-top.bg-dgreen {
+  background: #afc908; }
+.page-footer-top.bg-magenta {
+  background:#7D1935; }
+.page-footer-top.bg-orange {
+  background: #ff5c00; }
+.page-footer-top.bg-lorange {
+  background: #ff6908; }
+.page-footer-top.bg-oyellow {
+  background: #fc9200; }
+.page-footer-top.bg-loyellow {
+  background: #ffb515; }
+

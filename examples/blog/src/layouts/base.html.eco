@@ -1,0 +1,120 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%-@getPreparedTitle()%></title>
+	<meta name="description" content="<%=@getPreparedDescription()%>" />
+    <meta name="keywords" content="<%=@getPreparedKeywords()%>" />
+	<%-@getBlock('meta').toHTML() %>
+    
+	<%-@getBlock('styles').add(@site.styles).add(@document.styles).toHTML() %>
+    <script src="/js/modernizr.js"></script>
+    <style>
+        .top-container {
+            background: #333333;
+            margin-bottom: 20px;
+        }
+
+        .post-img {
+            display: inline;
+            float:left;
+            width: 345px;
+            margin-bottom: 0;
+            margin-right: 1em;
+        }
+        .top-bar .name h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: "Arial Black", Gadget, sans-serif;
+        }
+        .top-bar .name h1 a {
+            padding-left: 0;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="top-container">
+        <div class="row">
+            <div class="large-12 columns">
+                <nav class="top-bar" data-topbar>
+                    <ul class="title-area">
+                        <li class="name">
+                            <h1><a href="/"><%-@site.title%></a></h1>
+                        </li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a>
+                        </li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <ul class="right">
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="/blog">Blog</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="/news">News &amp; Events</a>
+                            </li>
+                            <li>
+                                <a href="/login">Login</a>
+                            </li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <%-@content %>
+    <div class="page-footer-bottom">
+        <div class="row">
+            <div class="medium-4 medium-4 push-8 columns">
+
+                <ul class="home-social">
+                    <li>
+                        <a href="http://www.twitter.com/" class="twitter"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.facebook.com/" class="facebook"></a>
+                    </li>
+                    <li>
+                        <a href="/contact" class="mail"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="medium-8 medium-8 pull-4 columns">
+                <ul class="site-links">
+                    <li class="name">
+                        <a href="/"><%-@site.title%></a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/news">News &amp; Events</a>
+                    </li>
+                </ul>
+                <p class="copyright">©<%-@thisYear%> <%-@site.title%>. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    
+    
+	
+	<%-@getBlock('scripts').add(@site.scripts,{defer:false}).add(@document.scripts,{defer:false}).toHTML() %>
+
+</body>
+
+</html>

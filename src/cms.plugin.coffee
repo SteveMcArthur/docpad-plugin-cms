@@ -1,10 +1,11 @@
 # Export Plugin
 module.exports = (BasePlugin) ->
-    fs = require('safefs')
+    fs = require('fs')
     copy = require('fs-extra').copy
     path = require('path')
     ensurePaths = require('./helpers/ensurePaths')
     watchr = require('watchr')
+    console.log(path.join(__dirname,'..','templates','bootstrap'))
 
     # Define Plugin
     class CmsPlugin extends BasePlugin
@@ -13,8 +14,8 @@ module.exports = (BasePlugin) ->
 
         # Config
         config:
-            #should be a better way of doing this
-            templateLocation: path.join(fs.getParentPathSync(__dirname),'templates','bootstrap')
+
+            templateLocation: path.join(__dirname,'..','templates','bootstrap')
             templateFolder: 'cms'
             postsCollectionName: 'posts'
             copyTemplates: true
@@ -54,8 +55,10 @@ module.exports = (BasePlugin) ->
             
             #plugin.watchTemplates()
         
+        #problem calculating outpath
         watchListener: (type,pathToFile) ->
             if type == "update"
+                console.log("Update to: "+pathToFile)
                 dirname = path.dirname(pathToFile)
                 outpath = ""
                 inpath = ""
@@ -69,7 +72,9 @@ module.exports = (BasePlugin) ->
                     outpath = @docsPath
                     inpath = @tmpldocsDir
                 if outpath
-                    copy(inpath,outpath)
+                    console.log("Copy "+inpath)
+                    console.log("Copy to "+outpath)
+                    copy(pathToFile,outpath)
                 
         
         watchTemplates: ->
@@ -77,6 +82,7 @@ module.exports = (BasePlugin) ->
             opts =
                 path: @getConfig().templateLocation
                 listener: @watchListener
+            console.log("watch templates...")
             @watcher = watchr.watch(opts)
 
             

@@ -1,0 +1,265 @@
+body {
+  background-color: #f1f2f6; }
+
+.page-footer-top {
+  padding: 40px 0;
+  background: #074e68;
+  color: white; }
+
+.page-footer-top .row .columns {
+  *zoom: 1; }
+
+.page-footer-top .row .columns:before, .page-footer-top .row .columns:after {
+  content: " ";
+  display: table; }
+
+.page-footer-top .row .columns:after {
+  clear: both; }
+
+.page-footer-top.site {
+  background-position: 10px 7px; }
+
+.page-footer-top .property {
+  text-align: center; }
+
+.page-footer-top .property .property-info {
+  padding-top: 37px; }
+
+.page-footer-top .property h2 {
+  margin: 0;
+  padding: 0 !important; }
+
+.page-footer-top .property h2 a {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  font-family: "site-logo";
+  font-weight: normal;
+  font-size: 1.125rem;
+  padding: 0; }
+
+.page-footer-top .property h2 a:hover {
+  opacity: 0.8;
+  /*          filter: alpha(opacity=80); */ }
+
+.page-footer-top .property h2 a.services {
+  width: 190px; }
+
+.page-footer-top .property h2 a span {
+  display: none; }
+
+.page-footer-top .property h2 a strong {
+  font-size: 17px;
+  margin-left: -7px; }
+
+.page-footer-top .property h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px; }
+
+.page-footer-top .property h4 {
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: white;
+  margin-bottom: 10px; }
+
+.page-footer-top .property p, .page-footer-top .property li, .page-footer-top .property a {
+  font-size: 13px;
+  line-height: 21px;
+  color: white; }
+
+.page-footer-top .property a {
+  font-weight: bold;
+  color: white; }
+
+.page-footer-top .learn-links, .page-footer-top .support-links, .page-footer-top .connect-links {
+  padding: 50px 0 0 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  background: url(/img/footer-top-icons.png) no-repeat center 0;
+  height: 220px;
+  margin-bottom: 30px; }
+
+.page-footer-top .learn-links ul, .page-footer-top .support-links ul, .page-footer-top .connect-links ul {
+  margin-left: 0px !important;
+  list-style: none; }
+
+.page-footer-top .learn-links ul li, .page-footer-top .support-links ul li, .page-footer-top .connect-links ul li {
+  line-height: 20px; }
+
+.page-footer-top .learn-links {
+  background-position: center -325px; }
+
+.page-footer-top .support-links {
+  background-position: center -635px; }
+
+.page-footer-top .connect-links {
+  padding: 50px 20px 0;
+  background-position: center -9px; }
+
+.page-footer-top .connect-links .button {
+  font-size: 12px;
+  font-weight: normal;
+  background: rgba(0, 0, 0, 0.1);
+  color: white !important;
+  font-weight: bold;
+  text-shadow: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  border: none;
+  padding: 6px 16px; }
+
+.page-footer-top .global {
+  border-top: 1px solid rgba(255, 255, 255, 0.2); }
+
+.page-footer-top .global .footer-link-block {
+  font-weight: normal;
+  display: block;
+  margin: 30px 0 0 0; }
+
+.page-footer-top .global .footer-link-block.services {
+  background: url("/img/footer-studios.png") left top no-repeat; }
+
+.page-footer-top .global .footer-link-block.foundation {
+  background: url("/img/footer-foundation.png") left top no-repeat; }
+
+.page-footer-top .global .footer-link-block.apps {
+  background: url("/img/footer-products.png") left top no-repeat; }
+
+.page-footer-top .global .footer-link-block.expo {
+  background: url("/img/footer-expo.png") left top no-repeat; }
+
+.page-footer-top .global .footer-link-block span {
+  display: block;
+  color: white;
+  font-size: 0.75rem;
+  padding-left: 40px;
+  line-height: 18px; }
+
+.page-footer-top .global .footer-link-block span.title {
+  font-size: 1rem;
+  margin-bottom: 5px; }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .page-footer-top .property {
+    padding-top: 0px; }
+  .page-footer-top .property .learn-links, .page-footer-top .property .support-links, .page-footer-top .property .connect-links {
+    height: 240px;
+    padding: 50px 10px 0; } }
+
+@media only screen and (max-width: 40em) {
+  .page-footer-top .property .property-info {
+    padding-top: 0px; }
+  .page-footer-top .property .learn-links, .page-footer-top .property .support-links, .page-footer-top .property .connect-links {
+    border: none;
+    height: auto;
+    padding: 80px 20px 0;
+    margin: 4px 0 0 0;
+    border-top: 1px dotted rgba(255, 255, 255, 0.2); }
+  .page-footer-top .property .learn-links li a, .page-footer-top .property .support-links li a, .page-footer-top .property .connect-links li a {
+    font-size: 15px;
+    line-height: 2; }
+  .page-footer-top .property .learn-links p, .page-footer-top .property .learn-links a, .page-footer-top .property .support-links p, .page-footer-top .property .support-links a, .page-footer-top .property .connect-links p, .page-footer-top .property .connect-links a {
+    font-size: 16px; }
+  .page-footer-top .property .learn-links {
+    background-position: center -300px;
+    padding-top: 76px 20px 0; }
+  .page-footer-top .property .support-links {
+    padding: 76px 20px 0;
+    background-position: center -618px; }
+  .page-footer-top .property .connect-links {
+    padding: 76px 20px 14px;
+    background-position: center 10px; }
+  .page-footer-top .global {
+    border: none; }
+  .page-footer-top .footer-link-block span {
+    font-size: 0.6875rem;
+    line-height: 16px; }
+  .page-footer-top .footer-link-block.services {
+    border-top: 1px dotted rgba(255, 255, 255, 0.2);
+    padding-top: 40px;
+    margin-top: 0;
+    background-position: center 10px !important; } }
+
+/* Reformating pillars */
+@media only screen and (max-width: 40em) {
+  .page-footer-top .property .connect-links {
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px; }
+  .page-footer-top .global .footer-link-block {
+    padding-top: 50px;
+    text-align: center;
+    margin: 0 !important;
+    clear: both; }
+  .page-footer-top .global .footer-link-block span {
+    padding-left: 0px; }
+  .page-footer-top .global .footer-link-block.services {
+    border-top: 0;
+    background-position: center 15px !important; }
+  .page-footer-top .global .footer-link-block.foundation {
+    background-position: center 15px !important; }
+  .page-footer-top .global .footer-link-block.apps {
+    padding-top: 80px;
+    background-position: center 45px !important; }
+  .page-footer-top .global .footer-link-block.expo {
+    padding-top: 80px;
+    background-position: center 45px !important; }
+  .page-footer-top .property .learn-links {
+    background: none;
+    border: none;
+    padding-top: 0;
+    margin: 0; } }
+
+/* Retina Images */
+@media only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .page-footer-top .info-padding {
+    background-image: url("/img/footer-large-icon-retina.png");
+    background-size: 100px 400px; }
+  .page-footer-bottom ul.home-social li a {
+    background-image: url("/img/social-retina.png");
+    background-size: 50px 600px; }
+  .page-footer-top .global .footer-link-block {
+    font-weight: normal;
+    display: block;
+    margin: 30px 0 0 0; }
+  .page-footer-top .global .footer-link-block.services {
+    background: url("/img/footer-studios-retina.png") left top no-repeat; }
+  .page-footer-top .global .footer-link-block.foundation {
+    background-image: url("/img/footer-foundation-retina.png") left top no-repeat; }
+  .page-footer-top .global .footer-link-block.apps {
+    background-image: url("/img/footer-products-retina.png") left top no-repeat; }
+  .page-footer-top .global .footer-link-block.expo {
+    background-image: url("/img/footer-expo-retina.png") left top no-repeat; }
+  .page-footer-bottom a.site-logo {
+    background-image: url("/img/footer-icons-retina.png");
+    background-size: 100px 1400px; } }
+
+@media only screen and (max-width: 320px), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  .page-footer-top .info-padding {
+    background-image: url("/img/footer-large-icon-retina.png");
+    background-size: 100px 400px; }
+  .page-footer-top .global .footer-link-block {
+    font-weight: normal;
+    display: block;
+    margin: 30px 0 0 0; }
+  .page-footer-top .global .footer-link-block.services {
+    background: url("/img/footer-studios-retina.png") left top no-repeat;
+    background-size: 30px; }
+  .page-footer-top .global .footer-link-block.foundation {
+    background: url("/img/footer-foundation-retina.png") left top no-repeat;
+    background-size: 30px; }
+  .page-footer-top .global .footer-link-block.apps {
+    background: url("/img/footer-products-retina.png") left top no-repeat;
+    background-size: 30px; }
+  .page-footer-top .global .footer-link-block.expo {
+    background: url("/img/footer-expo-retina.png") left top no-repeat;
+    background-size: 30px; }
+  .page-footer-top .property .support-links, .page-footer-top .property .connect-links {
+    background-image: url("../-top-icons-retina.png");
+    background-size: 100px 1400px; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .page-footer-top .property .learn-links {
+    background: none; } }

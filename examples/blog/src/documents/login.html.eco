@@ -1,0 +1,33 @@
+--- 
+layout: base 
+dynamic: true 
+title: Login Page 
+styles: ['/css/login.css']
+---
+
+
+<div  class="section nopadding nomargin"></div>
+
+<div id="login-container" >
+        <div class="panel" style="max-width: 400px; background-color: rgba(255,255,255,0.93);">
+            <div class="panel-body" style="padding: 40px;">
+
+                <div class="line line-sm"></div>
+                <%if !@req.user:%>
+                <div class="center">
+                    <h4 style="margin-bottom: 15px;">Login with:</h4>            
+                    <a class="button" href="/auth/github">Sign in with Github</a>              
+                </div>
+                <%else:%>
+                    <%user=@req.user.screen_name || @req.user.username || @req.user.name || "Your Name"%>
+                <div class="center">
+                    <h4 style="margin-bottom: 15px;">Hello <%= user %>! You are already logged in:</h4>   
+                       <a class="button" href="/logout">Logout</a>
+                </div>
+                <%end%>
+
+        </div>
+    </div>
+
+</div>
+

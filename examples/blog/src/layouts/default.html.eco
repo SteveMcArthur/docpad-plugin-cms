@@ -1,0 +1,30 @@
+---
+layout: base
+---
+
+<div class="row">
+    <div class="large-9 columns" role="content">
+    <%posts = @getLatestPosts()%>
+    <%-@content %>
+    </div>
+    <aside class="large-3 columns">
+        <h5>Categories</h5>
+        <ul class="side-nav">
+            <li><a href="/news">News</a>
+            </li>
+            <li><a href="/blog">Pork</a>
+            </li>
+            <li><a href="/blog">Bacon</a>
+            </li>
+            <li><a href="/blog">Lard</a>
+            </li>
+            <li><a href="/blog">Something</a>
+            </li>
+        </ul>
+        <div class="panel">
+            <h5><%-posts[2].title%></h5>
+            <p><%-@truncateText(posts[2].content)%></p>
+            <a href="<%-posts[2].url%>">Read More →</a>
+        </div>
+    </aside>
+</div>

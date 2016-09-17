@@ -1,0 +1,16 @@
+---
+layout: 'default'
+---
+
+<%posts = @getLatestPosts()%>
+<%for i in [0..1]:%>
+<article>
+    <h3><a href="<%-posts[i].url%>"><%-posts[i].title%></a></h3>
+    <h6>Written by <a href="#"><%-posts[i].author%></a> on <%-posts[i].date.toDateString()%>.</h6>
+    <div class="post-img">
+        <img src="<%-posts[i].img%>" />
+    </div>
+    <%-posts[i].contentRenderedWithoutLayouts%>
+</article>
+<hr/>
+<%end%>

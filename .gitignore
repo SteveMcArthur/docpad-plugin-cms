@@ -38,6 +38,11 @@ examples/simple/plugins/
 examples/simple/src/layouts/cms/
 examples/simple/src/render/cms/
 examples/simple/src/static/cms/
+examples/blog/plugins/
+examples/blog/src/layouts/cms/
+examples/blog/src/render/cms/
+examples/blog/src/documents/cms/
+examples/blog/src/static/cms/
 test/src/layouts/cms/
 test/src/documents/cms/
 test/src/files/cms/

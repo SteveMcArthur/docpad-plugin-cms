@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<article>
+    <h3><a href="#"><%-@document.title%></a></h3>
+    <h6>Written by <a href="#"><%-@document.author%></a> on <%-@document.date.toDateString()%>.</h6>
+    <div class="post-img">
+        <img src="<%-@document.img%>" />
+    </div>
+    <%-@document.contentRenderedWithoutLayouts%>
+</article>

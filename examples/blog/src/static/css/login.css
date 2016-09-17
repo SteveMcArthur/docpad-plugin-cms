@@ -1,0 +1,46 @@
+
+.login-buttons {
+    text-align: center;
+}
+
+.login-buttons div {
+    width: 230px;
+    height: 40px;
+    padding: 0;
+    color: transparent;
+    margin: 10px auto 0 auto;
+}
+
+.login-buttons div a {
+    width: 230px;
+    height: 40px;
+    background: none;
+    color: transparent;
+    padding: 1px 40px 15px 40px;
+}
+
+.git {
+    background: url(/images/social-med.png) -15px -90px
+}
+
+.panel-body {
+    text-align: center;
+}
+
+#login-container {
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    min-height: 70%;
+}
+.panel {
+    margin: auto;
+    margin-top: 30px;
+}
+
+.page-footer-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
