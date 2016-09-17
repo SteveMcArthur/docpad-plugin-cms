@@ -155,6 +155,8 @@ module.exports = (BasePlugin) ->
             getUsers: () ->
                 auth = @loadedPlugins["authentication"]
                 auth.simpleMembership.getUsers()
+                
+            loadedPlugins: @docpad.loadedPlugins
          
         extendTemplateData: (opts) ->
             templateData = opts.templateData

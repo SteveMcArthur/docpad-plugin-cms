@@ -237,18 +237,6 @@ docpadConfig = {
                 else
                     next()
                     
-            server.get '/cms/images', (req,res,next) ->
-                try
-                    coll = docpad.getDatabase().findAllLive({relativeOutDirPath:'images'}).toJSON()
-                    output = []
-                    coll.forEach (item) ->
-                        output.push(item.url)
-                    
-                    res.json(output)
-                catch err
-                    console.log(err)
-                    res.status(500).json({success:false,msg:"unable to find images"})
-
 
 }
 
