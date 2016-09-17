@@ -14,3 +14,7 @@ td input, td textarea {
 #sidebar-menu {
     margin-top: 1em;
 }
+
+.count_bottom {
+    display: none;
+}

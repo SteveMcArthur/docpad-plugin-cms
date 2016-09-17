@@ -11,7 +11,7 @@
 
     <!-- Site Properties -->
     <title><%=@document.title%></title>
-    <meta name="description" content="Admin pages" />
+    <meta name="description" content="cms pages" />
 
     <link  rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,700italic,400,700" />
     <!-- Icons -->
@@ -68,7 +68,7 @@
               <li><a href="/cms/pages"><i class="fa fa-files-o"></i>Pages</a></li>
               <li><a href="/cms/plugins"><i class="fa fa-plug"></i>Plugins</a></li>
               <li><a href="/cms/settings"><i class="fa fa-sliders"></i>Settings</a></li>
-              <li><a href="/cms/appearance"><i class="fa fa-paint-brush"></i>Appearance</a></li>
+<!--              <li><a href="/cms/appearance"><i class="fa fa-paint-brush"></i>Appearance</a></li>-->
               <li><a href="/cms/users"><i class="fa fa-user"></i>Users</a></li>
             <li><a href="/cms/analytics"><i class="fa fa-bar-chart-o"></i>Analytics</a></li>
             </ul>

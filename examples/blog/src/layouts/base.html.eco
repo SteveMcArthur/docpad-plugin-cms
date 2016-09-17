@@ -65,6 +65,9 @@
                                 <a href="/news">News &amp; Events</a>
                             </li>
                             <li>
+                                <a href="/cms">CMS</a>
+                            </li>
+                            <li>
                                 <a href="/login">Login</a>
                             </li>
                         </ul>
