@@ -61,8 +61,6 @@ module.exports = (BasePlugin) ->
         
         watchListener: (type,pathToFile) ->
             if type == "update"
-                console.log("Update to: ")
-                console.log(pathToFile)
                 dirname = path.dirname(pathToFile)
                 outpath = ""
 
@@ -76,8 +74,6 @@ module.exports = (BasePlugin) ->
                     filename = pathToFile.substr(thisPlugin.tmpldocsDir.length)
                     outpath = path.join(thisPlugin.docsPath,filename)
                 if outpath
-                    console.log("Copy "+pathToFile)
-                    console.log("Copy to "+outpath)
                     copy(pathToFile,outpath)
         
                 
@@ -88,7 +84,7 @@ module.exports = (BasePlugin) ->
             opts =
                 path: @getConfig().templateLocation
                 listener: @watchListener
-            console.log("watch templates...")
+            docpad.log("info","Watching CMS templates...")
             @watcher = watchr.watch(opts)
 
             
