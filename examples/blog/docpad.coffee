@@ -172,6 +172,9 @@ docpadConfig = {
     
         analytics:
             qryId: process.env.google_analytics_id
+    
+        cms:
+            watchTemplates: true
 
 
     # =================================

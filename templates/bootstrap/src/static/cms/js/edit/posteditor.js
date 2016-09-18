@@ -1,5 +1,6 @@
 /*global window, $,  CKEDITOR,downshow */
-function posteditor(el, opts) {
+var finishedFn = function(){};
+function posteditor(el, opts,callback) {
     
     if(!el){
         el = $('textarea#editor1').get(0);
@@ -11,6 +12,7 @@ function posteditor(el, opts) {
     if (!CKEDITOR) {
         alert('CKEDITOR missing!');
     }
+    finishedFn  = callback || finishedFn;
     this.config = {
         loadURL: '/load/' || opts.loadURL,
         saveURL: '/save' || opts.saveURL,
@@ -24,7 +26,8 @@ function posteditor(el, opts) {
         editMsgEl: '#edit-msg' || opts.editMsgEl,
         editLoaderEl: '#edit-loader' || opts.editLoaderEl,
         imagesURL: '/cms/images' || opts.imagesURL,
-        imagePickerEl: '#image-picker ul' || opts.imagePickerEl
+        imagePickerEl: '#image-picker ul' || opts.imagePickerEl,
+        editDateEl : '#last-edit span' || opts.editDateEl
     };
     this.init(el);
 
@@ -51,6 +54,8 @@ posteditor.prototype.getPost = function (id) {
             $(cfg.slugEl).text(data.slug);
             $(cfg.featureImgEl).attr('src', data.img);
             $(cfg.docidEl).text(data.docId);
+            var editDate = new Date(data.editdate);
+            $(cfg.editDateEl).text(editDate.toDateString());
             var tags = $(cfg.tagsEl);
             for (var i = 0; i < data.tags.length; i++) {
                 tags.append('<li><a href="#"><i class="fa fa-times-circle-o"></i></a>' + data.tags[i] + "</li>");
@@ -60,8 +65,11 @@ posteditor.prototype.getPost = function (id) {
                 callback: function () {
                     var btn = $('.cke_voice_label:contains("save")').parent();
                     btn.addClass('save-btn');
+                    finishedFn();
+                    
                 }
             });
+        
 
         });
 

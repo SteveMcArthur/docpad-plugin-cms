@@ -5,7 +5,6 @@ module.exports = (BasePlugin) ->
     path = require('path')
     ensurePaths = require('./helpers/ensurePaths')
     watchr = require('watchr')
-    console.log(path.join(__dirname,'..','templates','bootstrap'))
     thisPlugin = {name: "thisPlugin"}
 
     # Define Plugin
@@ -20,6 +19,7 @@ module.exports = (BasePlugin) ->
             templateFolder: 'cms'
             postsCollectionName: 'posts'
             copyTemplates: true
+            watchTemplates: false
             
         layoutsPath: ''
         filesPath: ''
@@ -47,15 +47,17 @@ module.exports = (BasePlugin) ->
             
             plugin = @
             thisPlugin = @
+            cfg = plugin.getConfig();
 
             #setup data, versions and documents path
             ensurePaths(plugin.docpad,plugin)
-            tplFolder = plugin.getConfig().templateFolder
+            tplFolder = cfg.templateFolder
             plugin.editURL = '/'+tplFolder+'/edit/*'
             plugin.imageURL =  '/'+tplFolder+'/images'
             plugin.dataURL = '/'+tplFolder+'/data/:item'
             
-            #plugin.watchTemplates()
+            if cfg.watchTemplates
+                plugin.watchTemplates()
         
         watchListener: (type,pathToFile) ->
             if type == "update"
@@ -76,7 +78,7 @@ module.exports = (BasePlugin) ->
                 if outpath
                     console.log("Copy "+pathToFile)
                     console.log("Copy to "+outpath)
-                    #copy(pathToFile,outpath)
+                    copy(pathToFile,outpath)
         
                 
         
