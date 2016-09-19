@@ -1,18 +1,20 @@
 /*global window, $,  CKEDITOR,downshow */
-var finishedFn = function(){};
-function posteditor(el, opts,callback) {
-    
-    if(!el){
+//callback called after data is loaded
+var finishedFn = function () {};
+
+function posteditor(el, opts, callback) {
+
+    if (!el) {
         el = $('textarea#editor1').get(0);
-        if(!el){
+        if (!el) {
             el = $('textarea').get(0);
         }
     }
-    
+
     if (!CKEDITOR) {
         alert('CKEDITOR missing!');
     }
-    finishedFn  = callback || finishedFn;
+    finishedFn = callback || finishedFn;
     this.config = {
         loadURL: '/load/' || opts.loadURL,
         saveURL: '/save' || opts.saveURL,
@@ -27,8 +29,8 @@ function posteditor(el, opts,callback) {
         editLoaderEl: '#edit-loader' || opts.editLoaderEl,
         imagesURL: '/cms/images' || opts.imagesURL,
         imagePickerEl: '#image-picker ul' || opts.imagePickerEl,
-        editDateEl : '#last-edit span' || opts.editDateEl,
-        authorEl : '#author span' || opts.authorEl
+        editDateEl: '#last-edit span' || opts.editDateEl,
+        authorEl: '#author span' || opts.authorEl
     };
     this.init(el);
 
@@ -47,31 +49,36 @@ function posteditor(el, opts,callback) {
     this.getPost(id);
 
 }
+posteditor.prototype.populatePage = function (data) {
+    var cfg = this.config;
+    $(cfg.titleEl).val(data.title);
+    $(cfg.slugEl).text(data.slug);
+    $(cfg.featureImgEl).attr('src', data.img);
+    $(cfg.docidEl).text(data.docId);
+    $(cfg.authorEl).text(data.author);
+    var editDate = new Date(data.editdate);
+    $(cfg.editDateEl).text(editDate.toDateString());
+    var tags = $(cfg.tagsEl);
+    tags.html("");
+    for (var i = 0; i < data.tags.length; i++) {
+        tags.append('<li><a href="#"><i class="fa fa-times-circle-o"></i></a>' + data.tags[i] + "</li>");
+    }
+
+};
 posteditor.prototype.getPost = function (id) {
     var cfg = this.config;
+    var self = this;
     $.get(cfg.loadURL + id)
         .done(function (data) {
-            $(cfg.titleEl).val(data.title);
-            $(cfg.slugEl).text(data.slug);
-            $(cfg.featureImgEl).attr('src', data.img);
-            $(cfg.docidEl).text(data.docId);
-            $(cfg.authorEl).text(data.author);
-            var editDate = new Date(data.editdate);
-            $(cfg.editDateEl).text(editDate.toDateString());
-            var tags = $(cfg.tagsEl);
-            for (var i = 0; i < data.tags.length; i++) {
-                tags.append('<li><a href="#"><i class="fa fa-times-circle-o"></i></a>' + data.tags[i] + "</li>");
-            }
-
+            self.populatePage(data);
             CKEDITOR.instances.editor1.setData(data.content, {
                 callback: function () {
                     var btn = $('.cke_voice_label:contains("save")').parent();
                     btn.addClass('save-btn');
                     finishedFn();
-                    
                 }
             });
-        
+
 
         });
 
@@ -83,7 +90,7 @@ posteditor.prototype.postData = function () {
     var slug = $(cfg.slugEl).text();
     var docId = parseInt($(cfg.docidEl).text());
     var author = $(cfg.authorEl).text();
-    var img = $(cfg.featureImgEl).text();
+    var img = $(cfg.featureImgEl).attr('src');
     var inputs = $(cfg.tagsEl + ' li');
     var tags = [];
     inputs.each(function () {
@@ -115,10 +122,11 @@ posteditor.prototype.postData = function () {
             docId: docId,
             img: img
         };
-
+        var self = this;
         $.post(cfg.saveURL, obj)
-            .done(function () {
+            .done(function (data) {
                 $(cfg.editMsgEl).show();
+                self.populatePage(data);
                 $(cfg.editLoaderEl).fadeOut(1000, function () {
                     $(cfg.editMsgEl).fadeOut(1000);
                 });
@@ -135,8 +143,8 @@ posteditor.prototype.postData = function () {
 
 if (!console) {
     console = {};
-} 
-console.log = console.log || function(){};
+}
+console.log = console.log || function () {};
 
 posteditor.prototype.loadImages = function () {
     var cfg = this.config;
