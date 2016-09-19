@@ -142,7 +142,7 @@
       </div>
     </div>
     <!-- Admin scripts are independent of the actual docpad application -->
-    <script src="/cms/js/jquery.min.js"></script>
+    <script src="/cms/js/jquery.js"></script>
     <script src="/cms/js/bootstrap.min.js"></script>
     <script src="/cms/js/base.js"></script>
     
