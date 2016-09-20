@@ -572,11 +572,13 @@ a:hover, a:focus {
   width: 100%;
   color: #ECF0F1 !important;
   margin-left: 0 !important;
-  line-height: 59px;
+  line-height: 30px;
   display: block;
   height: 55px;
   margin: 0;
-  padding-left: 10px; }
+  padding-left: 10px; 
+  margin-top: 0.5em;
+}
 
 .site_title:hover, .site_title:focus {
   text-decoration: none; }

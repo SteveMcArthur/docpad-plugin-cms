@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="/cms/css/skins/flat/green.css" />
     <link rel="stylesheet" href="/cms/css/bootstrap-progressbar-3.3.4.min.css" />
     <link rel="stylesheet" href="/cms/css/jquery-jvectormap-2.0.3.css" />
-    <link rel="stylesheet" href="/cms/css/custom.min.css" />
+    <link rel="stylesheet" href="/cms/css/custom.css" />
      <link rel="stylesheet" href="/cms/css/extras.css" />
     <%- @getBlock('styles').add(@document.styles).toHTML() %>
 </head>
@@ -40,8 +40,11 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> 
-			  <span><%-@site.title%></span></a>
+              <a href="/" class="site_title">
+                <div class="col-md-3">
+                  <i class="fa fa-paw"></i>
+                </div>
+			  <span class="col-md-9"><%-@site.title%></span></a>
             </div>
             <div class="clearfix"></div>
             <!-- menu profile quick info -->
