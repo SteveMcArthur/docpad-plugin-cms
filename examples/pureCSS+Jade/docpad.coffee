@@ -76,10 +76,10 @@ docpadConfig = {
             @site.keywords.concat(@document.keywords or []).join(', ')
             
         getPinnedPost: ->
-            @getCollection('posts').findOne({title: 'Introducing Pure'})
+            @getCollection('posts').findOne({title: 'CMS plugin for DocPad'})
             
         getRecentPosts: ->
-            @getCollection('posts').findAll({title: $ne: 'Introducing Pure'})
+            @getCollection('posts').findAll({title: $ne: 'CMS plugin for DocPad'})
             
             
         truncate: require('truncate-html')
@@ -89,13 +89,7 @@ docpadConfig = {
             "Tilo Mitra": "/img/tilo-avatar.png"
             "Reid Burke": "/img/reid-avatar.png"
             "Andrew Wooldridge": "/img/andrew-avatar.png"
-            
-        writeObject: (obj,name) ->
-            try
-                fs.writeFile(name+".json",util.inspect(obj,{depth:4}),'utf-8')
-            catch
-                console.log("WRITE OBJECT FAILED..")
-          
+            "Steve McArthur": "/img/steve-avatar.png"
             
             
     collections:
