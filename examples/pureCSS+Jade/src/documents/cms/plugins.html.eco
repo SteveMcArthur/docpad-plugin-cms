@@ -1,0 +1,49 @@
+--- 
+layout: cms/admin 
+title: Plugins 
+scripts: ['/cms/js/showdown.js','/cms/js/plugins.js'] 
+---
+
+<div class="x_panel">
+    <div class="x_title">
+         <h2>Plugins</h2>
+        <div class="clearfix"></div>
+    </div>
+        <div class="x_content">
+            <table class="table plugins">
+                <thead>
+                    <tr>
+                        <th style="width:15%;">Name</th>
+                        <th>Description</th>
+                        <th>Version</th>
+                        <th>Enabled</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%plugins = @loadedPlugins%>
+                    <%for name,plugin of plugins:%>
+                        <%rowClass = if plugin.isEnabled() then "" else "disabled"%>
+                        <tr class="<%-rowClass%>" data-name="<%-name%>">
+                            <td>
+                                <a class="readme-btn" data-id="<%-name%>" href="/cms/readme">
+                                    <i class="fa fa-eye"></i><%-name%>
+                                </a>
+                            </td>
+                            <td>
+                                <%-plugin.description%>
+                            </td>
+                            <td>
+                                <%-plugin.version%>
+                            </td>
+                            <td>
+                                <%-plugin.isEnabled()%>
+                            </td>
+                        </tr>
+                    <%end%>
+                </tbody>
+            </table>
+            <div id="plugin-desc" class="x_panel">
+
+            </div>
+        </div>
+</div>

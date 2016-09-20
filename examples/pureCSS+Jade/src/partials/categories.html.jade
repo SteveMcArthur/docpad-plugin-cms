@@ -1,0 +1,11 @@
+if document.tags == null
+  a.post-category.post-category(href='#') Uncategorized
+else
+  if document.tags.indexOf('CSS') > -1
+    a.post-category.post-category-design(href='#') CSS
+  if document.tags.indexOf('Pure') > -1
+    a.post-category.post-category-pure(href='#') Pure
+  if document.tags.indexOf('JavaScript') > -1
+    a.post-category.post-category-js(href='#') JavaScript
+  if document.tags.indexOf('YUI') > -1
+    a.post-category.post-category-js(href='#') YUI

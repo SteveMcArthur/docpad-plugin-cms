@@ -1,0 +1,48 @@
+---
+layout: default
+---
+- pinned =  getPinnedPost().toJSON()
+
+div
+  // A wrapper for all the blog posts
+  .posts
+    h1.content-subhead Pinned Post
+    // A single blog post
+    section.post
+      header.post-header
+        img.post-avatar(alt="#{pinned.author}'s avatar", height='48', width='48', src='#{authorImages[pinned.author]}')
+        a(href='#{pinned.url}')
+          h2.post-title #{pinned.title}
+        p.post-meta
+          | By 
+          a.post-author(href='#') #{pinned.author}
+          |  under 
+          != partial('categories',{document:pinned})
+      .post-description
+        p
+          != truncate(pinned.contentRenderedWithoutLayouts,300)
+  .posts
+    h1.content-subhead Recent Posts
+    - recent = getRecentPosts().toJSON()
+    - each doc in recent
+        section.post
+          header.post-header
+            img.post-avatar(alt="#{doc.author}'s avatar", height='48', width='48', src='#{authorImages[doc.author]}')
+            a(href='#{doc.url}')
+                h2.post-title #{doc.title}
+            p.post-meta
+              | By 
+              a.post-author(href='#') #{doc.author}
+              |  under 
+              != partial('categories',{document:doc})
+          .post-description
+            if doc.img
+              div.post-images.pure-g
+                - each item in doc.img
+                  .pure-u-1.pure-u-md-1-2
+                    a(href='#{item.src}')
+                      img.pure-img-responsive(alt='#{item.alt}', src='#{item.src}')
+                    .post-image-meta
+                      h3 CSSConf Photos
+            p
+              != truncate(doc.contentRenderedWithoutLayouts,300)

@@ -1,0 +1,47 @@
+---
+layout: cms/admin
+title: Users
+---
+<div class="x_panel">
+    <div class="x_title">
+         <h2>Users</h2>
+        <div class="clearfix"></div>
+    </div>
+        <div class="x_content">
+            <table class="table plugins">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Service</th>
+                        <th>Admin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%users = @getUsers()%>
+                    <%for user in users:%>
+                        <%rowClass = if user.isNew then "new" else ""%>
+                        <tr class="<%-rowClass%>" data-id="<%-user.our_id%>">
+                            <td>
+                                <%-user.our_id%>
+                            </td>
+                            <td>
+                                <%-user.name%>
+                            </td>
+                            <td>
+                                <%-user.email%>
+                            </td>
+                            <td>
+                                <%-user.service%>
+                            </td>
+                            <td>
+                                <%-user.adminUser%>
+                            </td>
+                        </tr>
+                    <%end%>
+                </tbody>
+            </table>
+
+        </div>
+</div>

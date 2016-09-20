@@ -1,0 +1,62 @@
+--- 
+layout: cms/admin
+---
+
+<div class="row">
+    <div class="col-md-9">
+        <div class="post-editor">
+            <div class="wrap">
+                <input type="text" id="post-title" name="post_title" size="30" value="" placeholder="Enter title here" spellcheck="true" autocomplete="off">
+                Slug: <span id="slug"></span>
+                <span style="display:none;" id="docId"></span>
+                <p id="title-callout" class="triangle-right left hide">Enter title</p>
+            </div>
+            <div class="editor-tools"></div>
+            <form>
+                <textarea name="editor1" id="editor1" rows="10"></textarea>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div id="published" class="panel">
+            <h2>Metadata</h2>
+            <ul>
+                <li id="author" class="hide"><a href="#"><i class="fa fa-bullhorn"></i>Author: <span></span></a></li>
+                <li id="status" class="hide"><a href="#"><i class="fa fa-bullhorn"></i>Status <span>Published</span></a></li>
+                <li id="revisions" class="hide"><a href="#"><i class="fa fa-history"></i>Revisions <span></span></a></li>
+                <li id="pub-date" class="hide"><a href="#"><i class="fa fa-calendar"></i>Published on: <span></span></a></li>
+                <li id="last-edit" class="hide"><a href="#"><i class="fa fa-calendar"></i>Last Edit: <span></span></a></li>
+            </ul>
+        </div>
+        <div id="img-panel" class="panel">
+            <h2>Feature Image</h2>
+            <img id="feature-img" src="">
+
+            <div id="imgdim"></div>
+
+        </div>
+        <div class="panel">
+            <h2>Tags</h2>
+            <input type="text" id="new-tag" name="new-tag" width="80%">
+            <input type="button" id="add-tag" value="Add">
+            <ul id="tags">
+
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+<div id="edit-loader">
+
+</div>
+<div id="edit-msg">
+    <div>
+        Post Updated Successfully
+    </div>
+</div>
+<div id="image-picker" title="Choose Image">
+    <ul class="small-block-grid-3">
+        <li><img src="/images/default-image.jpg"></li>
+    </ul>
+</div>

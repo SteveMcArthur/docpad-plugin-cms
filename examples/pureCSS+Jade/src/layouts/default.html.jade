@@ -1,0 +1,38 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title #{getPreparedTitle()}
+    meta(name='title', content=documentTitle)
+    meta(name='description', content=getPreparedDescription())
+    meta(name='keywords', content= getPreparedKeywords())
+    !{'\n\r'}
+    != getBlock('meta').add(site.meta).toHTML()
+    
+    != getBlock("styles").add(site.styles).add(document.styles).toHTML()
+
+  body
+    #layout.pure-g
+      .sidebar.pure-u-1.pure-u-md-1-4
+        .header
+          a.brand-link(href='/')
+            h1.brand-title #{site.title}
+          h2.brand-tagline #{site.tagline}
+          nav.nav
+            ul.nav-list
+              li.nav-item
+                a.pure-button(href='http://purecss.io') Pure
+              li.nav-item
+                a.pure-button(href='http://yuilibrary.com') YUI Library
+      .content.pure-u-1.pure-u-md-3-4
+          != content
+          .footer
+            .pure-menu.pure-menu-horizontal
+              ul
+                li.pure-menu-item
+                  a.pure-menu-link(href='http://purecss.io/') About
+                li.pure-menu-item
+                  a.pure-menu-link(href='http://twitter.com/yuilibrary/') Twitter
+                li.pure-menu-item
+                  a.pure-menu-link(href='http://github.com/yahoo/pure/') GitHub
