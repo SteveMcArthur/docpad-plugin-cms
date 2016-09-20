@@ -1,6 +1,7 @@
 # Export Plugin
 module.exports = (BasePlugin) ->
     fs = require('fs')
+    util = require('util')
     copy = require('fs-extra').copy
     path = require('path')
     ensurePaths = require('./helpers/ensurePaths')
@@ -156,14 +157,20 @@ module.exports = (BasePlugin) ->
             
             getUsers: () ->
                 auth = @loadedPlugins["authentication"]
-                auth.simpleMembership.getUsers()
-                
-            loadedPlugins: @loadedPlugins
+                if auth.getUsers
+                    return auth.getUsers()
+                else if auth.simpleMembership
+                    return auth.simpleMembership.getUsers()
+                else
+                    return []
+
          
         extendTemplateData: (opts) ->
             templateData = opts.templateData
-            plugin = @
+            plugin = thisPlugin
+ 
             templateData.postsCollectionName = plugin.getConfig().postsCollectionName
+            templateData.loadedPlugins = plugin.docpad.loadedPlugins
             plugin.buildCollections()
             plugin.checkPlugins()
             #add the docpad config object to the templateData

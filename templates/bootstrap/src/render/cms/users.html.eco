@@ -2,7 +2,6 @@
 layout: cms/admin
 title: Users
 ---
-
 <div class="x_panel">
     <div class="x_title">
          <h2>Users</h2>
