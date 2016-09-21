@@ -4,7 +4,7 @@ title: CMS plugin for DocPad
 author: Steve McArthur 
 tags: ['DocPad']
 ---
-This example website shows how the [docpad-plugin-cms](https://www.npmjs.com/package/docpad-plugin-cms) works with any responsive/CSS/HTML framework and any DocPad templating system. The CMS interface itself uses the [bootstrap framework](http://getbootstrap.com/) and the [ECO templating](https://www.npmjs.com/package/docpad-plugin-eco) system, but is isolated from whatever the website uses itself. 
+This example website shows how the [docpad-plugin-cms](https://www.npmjs.com/package/docpad-plugin-cms) works with any responsive/CSS/HTML framework and any DocPad templating system that may be used by a website. The CMS interface itself uses the [bootstrap framework](http://getbootstrap.com/) and the [ECO templating](https://www.npmjs.com/package/docpad-plugin-eco) system, but is isolated from whatever the website uses itself. 
 
 However, to function properly a number of supporting plugins need to be installed. The ECO plugin is needed to render the CMS interface and this plugin can be installed alongside whatever template plugin that is installed already. In this case, the [Jade plugin](https://www.npmjs.com/package/docpad-plugin-jade).
 

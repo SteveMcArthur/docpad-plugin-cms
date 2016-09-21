@@ -7,9 +7,9 @@
     "npm": "^3.10"
   },
   "dependencies": {
-    "docpad": "^6.70.0",
-    "docpad-plugin-analytics": "^2.1.0",
-    "docpad-plugin-authentication": "^2.4.2",
+    "docpad": "^6.78.6",
+    "docpad-plugin-analytics": "^2.1.1",
+    "docpad-plugin-authentication": "^2.4.3",
     "docpad-plugin-cleanurls": "^2.8.1",
     "docpad-plugin-eco": "^2.1.0",
     "docpad-plugin-jade": "^2.6.0",

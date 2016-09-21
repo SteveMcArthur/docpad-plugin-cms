@@ -96,6 +96,8 @@ module.exports = (BasePlugin) ->
                         data = plugin.formatData(rawData)
                         callback(null,data)
                         
+        
+                        
             
         setConfig: ->
             super
@@ -115,8 +117,13 @@ module.exports = (BasePlugin) ->
         init: ->
             creds =  @config.credentials
             if !creds
-                creds = require(@config.credentialsFile)
-            @jwtClient = new google.auth.JWT(creds.client_email, null, creds.private_key, ['https://www.googleapis.com/auth/analytics.readonly'], null)
+                try
+                    creds = require(@config.credentialsFile)
+                catch err
+                    @credentialsMissing = true
+                    @docpad.log("warn","Analytics - no credentials file")
+            if creds
+                @jwtClient = new google.auth.JWT(creds.client_email, null, creds.private_key, ['https://www.googleapis.com/auth/analytics.readonly'], null)
             
         # Use to extend the server with routes that will be triggered before the DocPad routes.
         serverExtend: (opts) ->
@@ -128,30 +135,33 @@ module.exports = (BasePlugin) ->
             queries = config.queries
             
             server.get config.dataURL, (req,res,next) ->
-                endPoint = req.params.endPoint
-                if endPoint == "endpoints"
-                    endPoints = plugin.getEndpoints()
-                    res.json(endPoints)
-                else
-
-                    theQry = plugin.findQuery(endPoint)
-
-                    if theQry
-                        try
-                            if !theQry.ids
-                                theQry.ids = config.qryId
-                            plugin.retrieveData theQry, (err,data) ->
-                                if err
-                                    obj =
-                                        msg:'error retrieving data',
-                                        err: err
-                                    res.status(500).json(obj)
-                                else
-                                    res.json(data)
-                        catch err
-                            res.status(500).json(err)
+                if plugin.credentialsMissing
+                    res.status(500).json({msg:"No credentials"})
+                else                
+                    endPoint = req.params.endPoint
+                    if endPoint == "endpoints"
+                        endPoints = plugin.getEndpoints()
+                        res.json(endPoints)
                     else
-                        res.status(500).json({msg:"Unable to find matching query"})
+
+                        theQry = plugin.findQuery(endPoint)
+
+                        if theQry
+                            try
+                                if !theQry.ids
+                                    theQry.ids = config.qryId
+                                plugin.retrieveData theQry, (err,data) ->
+                                    if err
+                                        obj =
+                                            msg:'error retrieving data',
+                                            err: err
+                                        res.status(500).json(obj)
+                                    else
+                                        res.json(data)
+                            catch err
+                                res.status(500).json(err)
+                        else
+                            res.status(500).json({msg:"Unable to find matching query"})
                         
 
             @
