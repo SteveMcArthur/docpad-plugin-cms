@@ -11,7 +11,7 @@ The plugin is still under development - so some functionality is liable to chang
 ![Screen shot](https://raw.githubusercontent.com/SteveMcArthur/docpad-plugin-cms/master/screenshot.jpg)
 
 ## Supporting Plugins
-To function properly a number of supporting plugins need to be installed. The ECO plugin is needed to render the CMS interface and this plugin can be installed alongside whatever template plugin that is installed within an application already.
+To function properly a number of supporting plugins need to be installed. The [ECO plugin](https://www.npmjs.com/package/docpad-plugin-eco) is needed to render the CMS interface and this plugin can be installed alongside whatever template plugin that is installed within an application already.
 
 Other plugins that need to be installed are the [cleanurls](https://www.npmjs.com/package/docpad-plugin-cleanurls) and [posteditor](https://www.npmjs.com/package/docpad-plugin-posteditor) plugins. The cleanurls plugin is usually a good one to install anyway - so it is likely you will have it already. The posteditor plugin provides the functionality for editing posts - typically the most important function within a CMS.
 
