@@ -156,7 +156,7 @@ docpadConfig = {
             #client secret and client ID setup in
             #environment file
             protectedUrls: ['/test/*'],
-                    
+            forceServerCreation: true,        
             strategies:
                 github:
                     settings:
@@ -232,7 +232,7 @@ docpadConfig = {
             latestConfig = docpad.getConfig()
             oldUrls = latestConfig.templateData.site.oldUrls or []
             newUrl = latestConfig.templateData.site.url
-
+            console.log("docpad.coffee route..")
             # Redirect any requests accessing one of our sites oldUrls to the new site url
             server.use (req,res,next) ->
                 if req.headers.host in oldUrls

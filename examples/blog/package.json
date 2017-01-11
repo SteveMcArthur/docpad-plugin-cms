@@ -32,15 +32,17 @@
     "npm": "^3.10.2"
   },
   "dependencies": {
-    "docpad": "^6.78.0",
-    "docpad-plugin-analytics": "^2.1.0",
-    "docpad-plugin-authentication": "^2.4.2",
+    "docpad": "^6.78.6",
+    "docpad-plugin-analytics": "^2.1.1",
+    "docpad-plugin-authentication": "^2.5.2",
     "docpad-plugin-cleanurls": "^2.7.0",
+    "docpad-plugin-cms": "^2.5.4",
     "docpad-plugin-eco": "^2.1.0",
     "docpad-plugin-less": "^2.4.1",
     "docpad-plugin-marked": "^2.3.0",
     "docpad-plugin-partials": "^2.9.2",
-    "docpad-plugin-pluginmanager": "^2.0.0"
+    "docpad-plugin-pluginmanager": "^2.0.0",
+    "docpad-plugin-posteditor": "^2.1.2"
   },
   "devDependencies": {},
   "main": "node_modules/docpad/bin/docpad-server"
