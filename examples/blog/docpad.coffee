@@ -155,8 +155,8 @@ docpadConfig = {
             #change this to '/cms/*' once
             #client secret and client ID setup in
             #environment file
-            protectedUrls: ['/test/*'],
-            forceServerCreation: true,        
+            protectedUrls: ['/test/*']
+            forceServerCreation: true
             strategies:
                 github:
                     settings:

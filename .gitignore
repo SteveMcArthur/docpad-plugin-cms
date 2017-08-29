@@ -47,3 +47,4 @@ test/src/layouts/cms/
 test/src/documents/cms/
 test/src/files/cms/
 credentials.json
+package-lock.json
